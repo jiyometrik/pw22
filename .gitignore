@@ -1,6 +1,7 @@
 .auctex-auto/
 
 *.aux
+*.auxlock
 *.log
 *.out
 *.toc
