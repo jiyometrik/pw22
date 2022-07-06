@@ -21,3 +21,8 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           path: main.pdf
+      
+      - name: Upload PDF File to Repo
+        uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
