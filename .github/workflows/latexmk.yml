@@ -12,4 +12,4 @@ jobs:
           cmd: latexmk
           path: .
           opts: -pdf
-          # packages: acmart tikz
+          packages: pgfplots
