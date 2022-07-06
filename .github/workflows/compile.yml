@@ -16,3 +16,8 @@ jobs:
           glob_root_file: true
           latexmk_shell_escape: true
           post_compile: "latexmk -c"
+      - name: upload pdf file
+        uses: actions/upload-artifact@v2
+        with:
+          name: PDF
+          path: main.pdf
