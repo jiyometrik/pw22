@@ -1,15 +1,28 @@
-name: pw2022
-on: [push]
+name: 'Build LaTex Document with Biber'
+on: 
+  push:
 jobs:
-  latex-job:
+  build:
     runs-on: ubuntu-latest
-    name: A job to Compile Latex file
+
     steps:
-    - uses: actions/checkout@v1
-    - name: Compilation
-      uses: vinay0410/tectonic-action@master
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tex_path: './main.tex'
-        push: 'yes'
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        name: Tectonic Cache
+        with:
+          path: ~/.cache/Tectonic
+          key: ${{ runner.os }}-tectonic-${{ hashFiles('**/*.tex') }}
+          restore-keys: |
+           ${{ runner.os }}-tectonic-
+      - uses: wtfjoke/setup-tectonic@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          biber-version: "latest"
+      - name: Run Tectonic + Biber
+        run: tectonic main.tex
+      - name: Upload pdf
+        uses: actions/upload-artifact@v2
+        with:
+          name: main
+          path: main.pdf
