@@ -12,7 +12,7 @@ jobs:
       - name: Generate PDF Document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: "*.tex"
+          root_file: "main.tex"
           latexmk_shell_escape: true
           post_compile: "latexmk -c"
 
