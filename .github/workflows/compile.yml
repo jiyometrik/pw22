@@ -20,6 +20,7 @@ jobs:
       - name: Upload PDF File to Workflows Tab
         uses: actions/upload-artifact@v3
         with:
+          name: The_Bigger_The_Better_II
           path: main.pdf
       
       - name: Upload PDF File to Repo
