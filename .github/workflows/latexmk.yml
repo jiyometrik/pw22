@@ -12,4 +12,5 @@ jobs:
           cmd: latexmk
           path: .
           opts: -pdf
-          packages: pgfplots mlmodern
+          packages: pgfplots mlmodern tikz setspace biblatex hyperref
+
