@@ -12,4 +12,4 @@ jobs:
           cmd: latexmk
           path: .
           opts: -pdf
-          packages: pgfplots
+          packages: pgfplots mlmodern noto-mono
