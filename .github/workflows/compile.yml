@@ -9,15 +9,15 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
 
-      - name: Generate PDF document
+      - name: Generate PDF Document
         uses: xu-cheng/latex-action@v2
         with:
           root_file: "*.tex"
           glob_root_file: true
           latexmk_shell_escape: true
           post_compile: "latexmk -c"
-      - name: upload pdf file
-        uses: actions/upload-artifact@v2
+
+      - name: Upload PDF File to Workflows Tab
+        uses: actions/upload-artifact@v3
         with:
-          name: PDF
           path: main.pdf
