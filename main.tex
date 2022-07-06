@@ -3,11 +3,14 @@
 \usepackage{amsmath, amssymb, amsthm}
 
 \usepackage{tikz, pgfplots}
-\pgfplotsset{compat=1.9}
+\pgfplotsset{compat=1.18, width=10cm}
 \usepgfplotslibrary{external}
 \tikzexternalize
 
-\usepackage{txfonts}
+\usepackage[OT1]{fontenc}
+\usepackage{mlmodern}
+\usepackage{noto-mono}
+
 \usepackage{setspace}
 
 \usepackage{biblatex}
@@ -23,7 +26,7 @@
 \maketitle
 \tableofcontents
 
-\section{abstract}
+\begin{abstract}
   This project aims to find an algorithm to determine
   the largest square that can be fitted into a convex
   $n$-gon.
