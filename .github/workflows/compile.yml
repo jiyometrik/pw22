@@ -13,16 +13,9 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: "*.tex"
-          glob_root_file: true
           latexmk_shell_escape: true
           post_compile: "latexmk -c"
 
-      - name: Upload PDF File to Workflows Tab
-        uses: actions/upload-artifact@v3
-        with:
-          name: The_Bigger_The_Better_II
-          path: main.pdf
-      
       - name: Upload PDF File to Repo
         uses: mikeal/publish-to-github-action@master
         env:
