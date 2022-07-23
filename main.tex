@@ -32,6 +32,7 @@ inscribed inside a convex $n$-gon. It is a continuation from
 a previous project completed in 2021, The Bigger The Better. \cite{tbtb1}
 
 \subsection{Rationale}
+Do note that the definition of "inscribed" is such that all vertices of the square lie on the sides of the polygon.
 
 \subsection{Research Questions}
 \begin{enumerate}
@@ -41,6 +42,34 @@ a previous project completed in 2021, The Bigger The Better. \cite{tbtb1}
 \end{enumerate}
 
 \subsection{Project Scope}
+This project will mainly focus on polygons which are convex. This allows many restrictions to be made.
+
+\section{Research Question 1}
+
+\subsection{Introduction}
+The first research question aims to find out the side length of the largest square that can be inscribed in a triangle, given the side lengths of the triangle.
+
+\subsection{Key insights}
+\begin{enumerate}
+	\item It can be seen that no more than 2 vertices of a square can lie on a single side, as a square has at most 2 vertices lying on a single line.
+	\item We notice how a triangle has 3 sides, and a square has 4 vertices. In order for all the vertices to lie on the triangle, by pigeonhole principle, at least one side has at least 2 vertices lying on it.
+	\item Combining the first 2 insights, we can see that 2 sides of the triangle will have 1 vertices each lying on it, while the other side will have 2 vertices lying on it.
+\end{enumerate}
+
+\subsection{Solutions}
+%insert image 1 here
+\(s\ =\ \frac{c}{1+\cot \angle A+\cot \angle B}\) \\
+\(=\frac{c\sin \angle A}{\sin \angle A+\cos \angle A+\cot \angle B\sin \angle A}\) \\
+\(=\frac{c\sin \angle A\sin \angle B}{\sin \angle A\sin \angle B+\cos \angle A\sin \angle B+\sin \angle A\cos \angle B}\) \\
+\(=\frac{c\sin \angle A\sin \angle B}{\sin \angle A\sin \angle B+\sin\left(\angle A+\angle B\right)}\) \\
+\(=\frac{c\sin \angle A\sin \angle B}{\sin \angle A\sin \angle B+\sin\left(180-\angle C\right)}\) \\
+\(=\frac{c\sin \angle A\sin \angle B}{\sin \angle A\sin \angle B+\sin \angle C}\) \\
+\(=\frac{2Rc\sin \angle A\sin \angle B}{2R\sin \angle A\sin \angle B+2R\sin \angle C}\) \\
+\(=\frac{ac\sin \angle B}{a\sin \angle B+c}\) \\
+\(=\frac{2Rac\sin \angle B}{2Ra\sin \angle B+2Rc}\) \\
+\(=\frac{abc}{2Rc+ab}\)
+
+
 
 \printbibliography
 \end{document}
