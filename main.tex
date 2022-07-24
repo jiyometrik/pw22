@@ -44,12 +44,15 @@ Do note that the definition of inscribed is such that all vertices of the square
 \subsection{Project Scope}
 This project will mainly focus on polygons which are convex. This allows many restrictions to be made.
 
+\section{Literature Review}
+% stuff...
+
 \section{Research Question 1}
 
 \subsection{Introduction}
 The first research question aims to find out the side length of the largest square that can be inscribed in a triangle, given the side lengths of the triangle.
 
-\subsection{Key insights}
+\subsection{Key Insights}
 \begin{enumerate}
 	\item It can be seen that no more than 2 vertices of a square can lie on a single side, as a square has at most 2 vertices lying on a single line.
 	\item We notice how a triangle has 3 sides, and a square has 4 vertices. In order for all the vertices to lie on the triangle, by pigeonhole principle, at least one side has at least 2 vertices lying on it.
@@ -58,8 +61,10 @@ The first research question aims to find out the side length of the largest squa
 
 \subsection{Solutions}
 %insert image 1 here
+\begin{figure}[htpb]
+\centering
 \begin{align*}
-s\ &=\ \frac{c}{1+\cot \angle A+\cot \angle B} \\
+s &= \frac{c}{1+\cot \angle A+\cot \angle B} \\
 &=\frac{c\sin \angle A}{\sin \angle A+\cos \angle A+\cot \angle B\sin \angle A} \\
 &=\frac{c\sin \angle A\sin \angle B}{\sin \angle A\sin \angle B+\cos \angle A\sin \angle B+\sin \angle A\cos \angle B} \\
 &=\frac{c\sin \angle A\sin \angle B}{\sin \angle A\sin \angle B+\sin\left(\angle A+\angle B\right)} \\
@@ -69,9 +74,11 @@ s\ &=\ \frac{c}{1+\cot \angle A+\cot \angle B} \\
 &=\frac{ac\sin \angle B}{a\sin \angle B+c} \\
 &=\frac{2Rac\sin \angle B}{2Ra\sin \angle B+2Rc} \\
 &=\frac{abc}{2Rc+ab} \\
-s_{max}=\max\left(\frac{abc}{2Rc+ab},\frac{abc}{2Rb+aa},\frac{abc}{2Ra+bc}\right)
+s_{\text{max}}=\max\left(\frac{abc}{2Rc+ab},\frac{abc}{2Rb+aa},\frac{abc}{2Ra+bc}\right)
 \end{align*}
-
+\caption{The solution for RQ1.}
+\label{fig:rq1m}
+\end{figure}
 
 \printbibliography
 \end{document}
