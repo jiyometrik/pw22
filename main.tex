@@ -60,25 +60,32 @@ The first research question aims to find out the side length of the largest squa
 \end{enumerate}
 
 \subsection{Solutions}
-%insert image 1 here
+% insert image 1 here
+
+% we need to write a description for this
 \begin{figure}[htpb]
-\centering
-\begin{align*}
-s &= \frac{c}{1+\cot \angle A+\cot \angle B} \\
-&=\frac{c\sin \angle A}{\sin \angle A+\cos \angle A+\cot \angle B\sin \angle A} \\
-&=\frac{c\sin \angle A\sin \angle B}{\sin \angle A\sin \angle B+\cos \angle A\sin \angle B+\sin \angle A\cos \angle B} \\
-&=\frac{c\sin \angle A\sin \angle B}{\sin \angle A\sin \angle B+\sin\left(\angle A+\angle B\right)} \\
-&=\frac{c\sin \angle A\sin \angle B}{\sin \angle A\sin \angle B+\sin\left(180-\angle C\right)} \\
-&=\frac{c\sin \angle A\sin \angle B}{\sin \angle A\sin \angle B+\sin \angle C} \\
-&=\frac{2Rc\sin \angle A\sin \angle B}{2R\sin \angle A\sin \angle B+2R\sin \angle C} \\
-&=\frac{ac\sin \angle B}{a\sin \angle B+c} \\
-&=\frac{2Rac\sin \angle B}{2Ra\sin \angle B+2Rc} \\
-&=\frac{abc}{2Rc+ab} \\
-s_{\text{max}}=\max\left(\frac{abc}{2Rc+ab},\frac{abc}{2Rb+aa},\frac{abc}{2Ra+bc}\right)
-\end{align*}
-\caption{The solution for RQ1.}
-\label{fig:rq1m}
+	\centering
+	\begin{align*}
+		s              & = \dfrac{c}{1+\cot \angle A+\cot \angle B}                                                                             \\
+		               & = \dfrac{c \sin\angle A}{\sin\angle A+\cos\angle A+\cot\angle B\sin\angle A}                                        \\
+		               & = \dfrac{c\sin\angle A\sin\angle B}{\sin\angle A\sin\angle B+\cos\angle A\sin\angle B+\sin\angle A\cos\angle B} \\
+		               & = \dfrac{c\sin\angle A\sin\angle B}{\sin\angle A\sin\angle B+\sin\left(\angle A+\angle B\right)}                    \\
+		               & = \dfrac{c\sin\angle A\sin\angle B}{\sin\angle A\sin\angle B+\sin\left(180-\angle C\right)}                         \\
+		               & = \dfrac{c\sin\angle A\sin\angle B}{\sin\angle A\sin\angle B+\sin \angle C}                                         \\
+		               & = \dfrac{2Rc\sin\angle A\sin\angle B}{2R\sin\angle A\sin \angle B+2R\sin \angle C}                                   \\
+		               & = \dfrac{ac\sin\angle B}{a\sin\angle B+c}                                                                             \\
+		               & = \dfrac{2Rac\sin\angle B}{2Ra\sin\angle B+2Rc}                                                                       \\
+		               & = \dfrac{abc}{2Rc+ab}                                                                                                   \\
+	\end{align*}
+	\caption{The solution for RQ1.}
+	\label{fig:rq1m}
 \end{figure}
+
+Since each of the sides of the triangle, $a$, $b$ and $c$ can be the longest side, 
+we can take the maximum of the three combinations, hence
+\begin{equation}
+s = \max\left(\dfrac{abc}{2Rc+ab},\dfrac{abc}{2Rb+ac},\dfrac{abc}{2Ra+bc}\right)
+\end{equation}
 
 \printbibliography
 \end{document}
