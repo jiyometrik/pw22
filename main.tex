@@ -77,15 +77,21 @@ The first research question aims to find out the side length of the largest squa
 		               & = \dfrac{2Rac\sin\angle B}{2Ra\sin\angle B+2Rc}                                                                       \\
 		               & = \dfrac{abc}{2Rc+ab}                                                                                                   \\
 	\end{align*}
-	\caption{The solution for RQ1.}
+	\caption{The solution for RQ1 for acute triangles and right triangles.}
 	\label{fig:rq1m}
 \end{figure}
 
 Since each of the sides of the triangle, $a$, $b$ and $c$ can be the longest side, 
 we can take the maximum of the three combinations, hence
 \begin{equation}
-s = \max\left(\dfrac{abc}{2Rc+ab},\dfrac{abc}{2Rb+ac},\dfrac{abc}{2Ra+bc}\right)
+s_max = \max\left(\dfrac{abc}{2Rc+ab},\dfrac{abc}{2Rb+ac},\dfrac{abc}{2Ra+bc}\right)
 \end{equation}
+
+For obtuse triangles, we notice that only 1 placement exist, when the square lies on the longest side. We have: 
+\begin{equation}
+s_max = \dfrac{abc}{2Rc+ab}
+\end{equation}
+, where c is the longest side.
 
 \printbibliography
 \end{document}
