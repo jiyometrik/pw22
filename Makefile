@@ -1,7 +1,8 @@
 FILE=main
 
 pdf:
-	latexmk -bibtex ${FILE}.tex
+	latexmk -bibtex src/${FILE}.tex
+	latexmk -c
 
 view:
 	open ${FILE}.pdf
