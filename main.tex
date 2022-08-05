@@ -51,6 +51,8 @@ This project will only focus on convex polygons.
 \section{Literature Review}
 % stuff...
 
+\clearpage
+
 \section{Research Question 1}
 
 RQ1 aims to find out the side length of the largest
@@ -68,9 +70,11 @@ Some key insights were found, which are:
 	      lying on the latter side of the triangle.
 \end{enumerate}
 
+\clearpage
+
 \subsection{Solution}
 A figure has been constructed for the purposes of illustrating the following proof.
-\begin{figure}[htpb]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[scale=.75]{images/rq1.jpg}
 	\label{fig:rq1_img}
@@ -81,7 +85,7 @@ We see that side $c$ can be formed with $s$ as well as $s \cot A$ and $s \cot \a
 \begin{align*}
 	c & = s+s\cot \angle A+s\cot \angle B                                                                            
 \end{align*}
-We would like to express s in terms of side lengths a, b and c, as well as other values directly derived from the side lengths.
+We would like to express s in terms of side lengths a, b and c, as well as other values directly derived from the side lengths. \\
 \begin{align*}
 	s & = \frac{c}{1+\cot \angle A+\cot \angle B}                                                                      \\
 	  & = \frac{c \sin\angle A}{\sin\angle A+\cos\angle A+\cot\angle B\sin\angle A}                                    \\
@@ -108,6 +112,8 @@ For obtuse triangles, we notice that only one placement exists, when the square 
 \end{equation}
 where c is the longest side.
 
+\clearpage
+
 \section{Research Question 2}
 
 RQ2 aims to find out the side length of the largest
@@ -121,33 +127,33 @@ We have noticed that this problem can be split into 3 separate cases:
 \end{enumerate}
 We shall tackle the cases in increasing order of difficulty.
 
+\clearpage
+
 \subsection{Case 1}
 
 The first case is when n is divisible by 4. \\
 This is the simplest case, as it can be seen that the diagonal of the square must be the same as the diagonal of the polygon. \\
-Proof: The diagonal of the square connects 2 vertices of the square opposite to each other. It is the longest line segment in a square. \\
-Since the square has to be inscribed in the polygon, both ends of the diagonal have to lie on the edges of the polygon. \\
-It can be seen that the 2 furthest points on the edges of the polygon would be any vertex of the polygon and the opposite vertex. \\
-Hence, the diagonal of the square can be at most the length of the diagonal of the polygon. \\
-We can show that such a construction exists. 
+Proof: The diagonal of the square connects 2 vertices of the square opposite to each other. It is the longest line segment in a square. 
+Since the square has to be inscribed in the polygon, both ends of the diagonal have to lie on the edges of the polygon. 
+It can be seen that the 2 furthest points on the edges of the polygon would be any vertex of the polygon and the opposite vertex. 
+Hence, the diagonal of the square can be at most the length of the diagonal of the polygon. 
+We can show that such a construction exists. \\
 
-\begin{figure}[htpb]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[scale=.75]{images/rq2_1_1.jpg}
 	\label{fig:rq2_1_1_img}
 	\caption{The constructions for case 1 of RQ2.}
 \end{figure}
 
-Hence, we can calculate the side length of the square.
+Hence, we can calculate the side length of the square. With reference to the figure, we shall calculate $l$ using the law of cosines. \\
 
-\begin{figure}[htpb]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[scale=.75]{images/rq2_1_2.jpg}
 	\label{fig:rq2_1_2_img}
 	\caption{The figure for case 1 of RQ2.}
 \end{figure}
-
-With reference to the figure, we shall calculate $l$ using the law of cosines.
 
 \begin{align*}
 	\angle AMB\ =\ \frac{360}{2n}\ =\ \frac{180}{n}     \\
@@ -157,7 +163,7 @@ With reference to the figure, we shall calculate $l$ using the law of cosines.
 	l\ =\ \sqrt{\frac{k}{2\left(1-\cos\left(\frac{180}{n}\right)\right)}}    \\
 \end{align*}
 
-Now, we can find $s$ using the Pythagoras theorem.
+Now, we can find $s$ using the Pythagoras theorem. \\
 
 \begin{align*}
   2s^{2}=\left(2l\right)^{2}    \\
