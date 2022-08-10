@@ -40,6 +40,7 @@ a previous project completed in 2021, The Bigger The Better. \cite{tbtb1}
 	\item[placement] A valid location, size and rotation of the square such that
 		all vertices of the square lie on the edges of the polygon.
 	\item[inscribed] All vertices of the square must lie on the edges of the polygon.
+	\item[fit] All vertices of the square must lie within the polygon.
 	\item[RQ] Research Question
 \end{description}
 
@@ -146,7 +147,82 @@ This case deals with the scenario where the number of sides in the $n$-gon is di
 Firstly, for the side length of the square to be maximised, more than one vertex of the square must coincide with the perimeter of the $n$-gon.
 This can be easily seen, because the square can be pushed outwards in the other direction if less than two vertices of the square touch the perimeter of the $n$-gon.
 
-Also, due to such a polygon being symmetrical both horizontally and vertically, the assumption that the centre of the polygon coincides with the centre of the square can be made. From the earlier observation, it can be assumed that one vertex of the square, $A$, lies on the perimeter of the polygon.
+Let the square be $ABCD$, and the polygon be $V_{1}V_{2}...V_{n}$. Also, let \(n = 4m\), where m is an integer.
+
+Due to such a polygon being symmetrical both horizontally and vertically, the assumption that the centre of the polygon coincides with the centre of the square can be made. From the earlier observation, it can be assumed that one vertex of the square, $A$, lies on the perimeter of the polygon. Also, due to the polygon being symmetrical both horizontally and vertically, the opposite vertex, $C$, will also lie on the perimeter of the polygon.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=.75]{images/rq2_1_1.jpg}
+	\label{fig:rq2_1_1_img}
+	\caption{The figure for finding possible placements for case 1 of RQ2.}
+\end{figure}
+
+Due to the symmetry, as long as vertex B lies on the perimeter of the polygon, the square can be inscribed. If vertex B lies within the polygon, the square can be fit. We shall find the values of $\theta$ such that the square can be inscribed or fit.
+
+Firstly, it can be seen that $V_{1}OV_{2} = V_{2}OV_{3} = ... = V_{n}OV_{1} = \frac{360^{\circ}}{n}$.
+Hence, $0 \leq \theta \leq \frac{360^{\circ}}{n}$.
+Furthermore, we can limit this range to $0 \leq \theta \leq \frac{180^{\circ}}{n}$, as when $\theta \geq \frac{180^{\circ}}{n}$, the diagram can be flipped to reduce $\theta$.
+Now, we can try to find $\angle V_{m+1}OB$. To do this, we find the slice of the polygon which contains segment $OB$. We can find the number of triangles that has to be passed through to form $\angle V_{1}OB$. Let this value be $x$. This gives the expression:
+
+\begin{align*}
+	 x = frac{\theta + 90^{\circ}}{frac{360^{\circ}}{n}}
+\end{align*}
+
+Simplifying it,
+
+\begin{align*}
+	 x & = frac{\theta + 90^{\circ}}{frac{360^{\circ}}{n}}   \\
+	 & = frac{\theta n + 90^{\circ} n}{360^{\circ}} \\
+	 & = frac{\theta n}{360^{\circ}} + frac{n}{4}
+\end{align*}
+
+Plugging in the range for $\theta$,
+
+\begin{align*}
+	frac{n}{4} \leq frac{\theta n}{360^{\circ}} + frac{n}{4} \leq frac{n}{4} + frac{1}{2}
+\end{align*}
+
+Substituting $n$ for $4m$, 
+
+\begin{align*}
+	m \leq x \leq m + frac{1}{2}
+\end{align*}
+
+It can be seen that point $B$ is in triangle $V_{m+1}OV_{m+2}$, and is closer to $V_{m+1}$ than $V_{m+2}$.
+We can now check for equality between $OA$ and $OB$, as this would render $ABCD$ as a square. To do that, the equality $\angle V_{m+1}OB = \angle V_{1}OA$ must be true.
+
+\begin{align*}
+	\angle V_{m+1}OB & = \theta + 90^{\circ} - m\left(\frac{360^{\circ}}{n}\right)   \\
+	& = \theta
+\end{align*}
+
+Hence, a square can always be inscribed.
+
+To find the maximum side length of the square, we can maximise $OA$. Let $OV_{1} = r$.
+Using the sine law, 
+
+\begin{align*}
+	\angle AV_{1}O & = 90^{\circ} - \frac{180^{\circ}}{n}     \\
+	\frac{OA}{\sin \left(90^{\circ} - \frac{180^{\circ}}{n}\right)} & = \frac{r}{\sin \left(180^{\circ} - \theta - \left(90^{\circ} - \frac{180^{\circ}}{n}\right)\right)}  \\
+	\frac{OA}{\cos \frac{180^{\circ}}{n}} & = \frac{r}{\sin \left(\theta + 90^{\circ} - \frac{180^{\circ}}{n}\right)}    \\
+	OA & = \frac{r \cos \frac{180^{\circ}}{n}}{\cos \left(\frac{180^{\circ}}{n} - \theta\right)}
+\end{align*}
+
+Notice how the numerator is fixed. To maximise $OA$, we need to minimise $\cos \left(\frac{180^{\circ}}{n} - \theta\right)$. We need to maximise $\frac{180^{\circ}}{n} - \theta$, hence we have to minimise $\theta$. This can be done when $\theta = 0$.
+
+Now, we can find the side length of the square, $s$, from $r$, and by expressing $r$ from the side length of the entire polygon, $k$, we can find $s$ from $k$ and $n$.
+
+\begin{align*}
+	OA & = \frac{r \cos \frac{180^{\circ}}{n}}{\cos \left(\frac{180^{\circ}}{n}\right)}  \\
+	& = r  \\
+	s & = OA\sqrt{2} \\
+	& = r\sqrt{2} \\
+	2r^2 \left(1 - \cos \frac{360^{\circ}}{n}\right) & = k^2  \\
+	r & = k\sqrt{\frac{1}{2 - 2\cos\frac{360^{\circ}}{n}}}  \\
+	s & = k\sqrt{\frac{2}{2 - 2\cos\frac{360^{\circ}}{n}}}  \\
+	& = k\sqrt{\frac{1}{1 - 1\cos\frac{360^{\circ}}{n}}}
+\end{align*}
 
 \printbibliography
 \end{document}
