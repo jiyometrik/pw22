@@ -124,77 +124,24 @@ where $c$ is the longest side.
 RQ2 aims to find out the side length of the largest square that can be inscribed in a convex $n$-gon,
 given $n$ and the side length of the $n$-gon, $k$.
 
-This problem can be further split into three cases.
+This problem can be further split into four cases.
 \begin{enumerate}
-	\item when $n$ is divisible by $4$,
-	\item when $n$ is divisible by $2$ but not $4$,
-	\item when $n$ is not divisible by $2$.
+	\item when \(n \equiv 0 (mod 4)\),
+	\item when \(n \equiv 2 (mod 4)\),
+	\item when \(n \equiv 1 (mod 4)\),
+	\item when \(n \equiv 3 (mod 4)\),
 \end{enumerate}
 
 \subsection{Case 1}
 This case deals with the scenario where the number of sides in the $n$-gon is
 divisible by $4$.
 
-It can be seen that the diagonal of the square must be equal to the diagonal of the polygon.
-\begin{proof}
-	The diagonal of the square connects two vertices of the square opposite to each other.
-	It is the longest line segment within a square.
-	Since the square must be inscribed in the polygon, both ends of the diagonal have to lie on the edges of the polygon.
-	The two furthest points on the edges of the polygon would be any vertex of the polygon and the vertex opposite to it.
-	Hence, the diagonal of the square can be at most the length of the diagonal of the polygon.
-\end{proof}
+Firstly, we can safely state that for the side length of the square to be maximised, more than 1 vertice of the square must coincide with the perimeter of the polygon. This can be easily seen, as if less than 2 vertices of the square touch the perimeter of the polygon, the square can be pushed outwards in the other direction.
 
-Such a construction exists, as shown by the following figure.
-\begin{figure}[htpb]
-	\centering
-	\includegraphics[scale=.65]{images/rq2_1_1.jpg}
-	\label{fig:rq2_1_1_img}
-	\caption{The constructions for Case 1 of RQ2.}
-\end{figure}
+Also, due to such a polygon being symmetrical both horizontally and vertically, we can assume that the centre of the polygon coincides with the centre of the square.
+From the observation earlier, we assume that one vertice of the square, named $A$, lies on the perimeter of the polygon.
 
-Hence, the side length of the square can be calculated.
-With reference to the figure, the Law of Cosines can be applied.
 
-\begin{theorem}[Law of Cosines]
-	Given a triangle with side lengths $a$, $b$ and $c$, and the angle formed by $a$
-	and $b$ as $\gamma$, $a^2 + b^2 - 2ab \cos \gamma = c^2$.
-\end{theorem}
-
-\begin{figure}[htpb]
-	\centering
-	\includegraphics[scale=.75]{images/rq2_1_2.jpg}
-	\label{fig:rq2_1_2_img}
-	\caption{The figure for case 1 of RQ2.}
-\end{figure}
-
-Taking $n$ to be the number of sides in the $n$-gon, $k$ to be the side length
-of the $n$-gon, and $l$ to be the distance from a vertex of the $n$-gon to its midpoint:
-\begin{align*}
-	\angle{AMB}                                               & = \frac{\ang{360}}{n}                                          \\
-	l^2+l^2-2\left(l\right)\left(l\right)\cdot\cos\angle{AMB} & =k^{2}                                                         \\
-	2l^2\left(1-\cos\angle{AMB}\right)                        & =k^{2}                                                         \\
-	l^2                                                       & =\frac{k^{2}}{2\left(1-\cos{\frac{\ang{360}}{n}}\right)}       \\
-	l                                                         & =\ k\sqrt{\frac{1}{2\left(1-\cos{\frac{\ang{360}}{n}}\right)}} \\
-\end{align*}
-
-Using the Pythagorean Theorem, which stipulates that:
-\begin{theorem}[Pythagorean Theorem]
-	In a right-angled triangle with side lengths $a$, $b$ and $c$, $c$ being that of the hypotenuse,
-	$a^2 + b^2 = c^2$.
-\end{theorem}
-
-\begin{align*}
-	2s^{2} & = \left(2l\right)^{2}                                         \\
-	s^{2}  & = 2l^{2}                                                      \\
-	s      & = l\sqrt{2}                                                   \\
-	       & = k\sqrt{\frac{2}{2\left(1-\cos{\frac{\ang{360}}{n}}\right)}} \\
-	       & = k\sqrt{\frac{1}{\left(1-\cos{\frac{\ang{360}}{n}}\right)}}  \\
-\end{align*}
-
-Hence,
-\begin{equation}
-	s = k\sqrt{\frac{1}{\left(1-\cos{\frac{\ang{360}}{n}}\right)}}
-\end{equation}
 
 \printbibliography
 \end{document}
