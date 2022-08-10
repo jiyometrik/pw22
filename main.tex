@@ -82,15 +82,21 @@ A figure has been constructed for the purposes of illustrating the following pro
 	\label{fig:rq1_img}
 	\caption{The figure for RQ1.}
 \end{figure}
+
 Let $s$ be the side length of the largest square that can be inscribed in a triangle,
 with side lengths $a$, $b$ and $c$, and circumradius $R$.
 
-Side $c$ can be formed with the sum of $s$, $s \cot A$ and $s \cot \angle{B}$. Hence, we can express $s$ with the side length $c$, as well as angles $A$ and $B$.
+Side $c$ can be formed with the sum of $s$, $s \cot A$ and $s \cot \angle{B}$.
+Hence, we can express $s$ with the side length $c$, as well as angles $A$ and $B$.
+
 \begin{align*}
 	c & = s+s\cot \angle{A}+s\cot \angle{B}          \\
 	s & = \frac{c}{1+\cot \angle{A}+\cot \angle{B}}                                                                            
 \end{align*}
-We multiply both sides of the fraction by $\sin A \sin B$ and use the sine addition formula.
+
+Both sides of the fraction can be multiplied by $\sin A \sin B$. Following which, the
+Sine Addition Formula can be applied.
+
 \begin{align*}
 	s & = \frac{c \sin\angle{A}}{\sin\angle{A}+\cos\angle{A}+\cot\angle{B}\sin\angle{A}}                                       \\
 	  & = \frac{c\sin\angle{A}\sin\angle{B}}{\sin\angle{A}\sin\angle{B}+\cos\angle{A}\sin\angle{B}+\sin\angle{A}\cos\angle{B}} \\
@@ -98,7 +104,9 @@ We multiply both sides of the fraction by $\sin A \sin B$ and use the sine addit
 	  & = \frac{c\sin\angle{A}\sin\angle{B}}{\sin\angle{A}\sin\angle{B}+\sin\left(180-\angle C\right)}                         \\
 	  & = \frac{c\sin\angle{A}\sin\angle{B}}{\sin\angle{A}\sin\angle{B}+\sin \angle C}                                         
 \end{align*}
-Now, we can multiply both sides of the fraction to $2Rc$ and use the law of sines to simplify.
+
+Both sides of the fraction can be multiplied by $2Rc$ and the Law of Sines can be used to simplify.
+
 \begin{align*}
 	 s & = \frac{2Rc\sin\angle{A}\sin\angle{B}}{2R\sin\angle{A}\sin \angle{B}+2R\sin \angle C}                                  \\
 	  & = \frac{ac\sin\angle{B}}{a\sin\angle{B}+c}                                                                             \\
@@ -126,22 +134,19 @@ given $n$ and the side length of the $n$-gon, $k$.
 
 This problem can be further split into four cases.
 \begin{enumerate}
-	\item when \(n \equiv 0 (mod 4)\),
-	\item when \(n \equiv 2 (mod 4)\),
-	\item when \(n \equiv 1 (mod 4)\),
-	\item when \(n \equiv 3 (mod 4)\),
+	\item when \(n \equiv 0\) (mod $4$),
+	\item when \(n \equiv 2\) (mod $4$),
+	\item when \(n \equiv 1\) (mod $4$),
+	\item when \(n \equiv 3\) (mod $4$). 
 \end{enumerate}
 
 \subsection{Case 1}
-This case deals with the scenario where the number of sides in the $n$-gon is
-divisible by $4$.
+This case deals with the scenario where the number of sides in the $n$-gon is divisible by $4$.
 
-Firstly, we can safely state that for the side length of the square to be maximised, more than 1 vertice of the square must coincide with the perimeter of the polygon. This can be easily seen, as if less than 2 vertices of the square touch the perimeter of the polygon, the square can be pushed outwards in the other direction.
+Firstly, for the side length of the square to be maximised, more than one vertex of the square must coincide with the perimeter of the $n$-gon.
+This can be easily seen, because the square can be pushed outwards in the other direction if less than two vertices of the square touch the perimeter of the $n$-gon.
 
-Also, due to such a polygon being symmetrical both horizontally and vertically, we can assume that the centre of the polygon coincides with the centre of the square.
-From the observation earlier, we assume that one vertice of the square, named $A$, lies on the perimeter of the polygon.
-
-
+Also, due to such a polygon being symmetrical both horizontally and vertically, the assumption that the centre of the polygon coincides with the centre of the square can be made. From the earlier observation, it can be assumed that one vertex of the square, $A$, lies on the perimeter of the polygon.
 
 \printbibliography
 \end{document}
