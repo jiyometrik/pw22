@@ -166,27 +166,27 @@ Furthermore, we can limit this range to $0 \leq \theta \leq \frac{180^{\circ}}{n
 Now, we can try to find $\angle V_{m+1}OB$. To do this, we find the slice of the polygon which contains segment $OB$. We can find the number of triangles that has to be passed through to form $\angle V_{1}OB$. Let this value be $x$. This gives the expression:
 
 \begin{align*}
-	 x = frac{\theta + 90^{\circ}}{frac{360^{\circ}}{n}}
+	 x = \frac{\theta + 90^{\circ}}{\frac{360^{\circ}}{n}}
 \end{align*}
 
 Simplifying it,
 
 \begin{align*}
-	 x & = frac{\theta + 90^{\circ}}{frac{360^{\circ}}{n}}   \\
-	 & = frac{\theta n + 90^{\circ} n}{360^{\circ}} \\
-	 & = frac{\theta n}{360^{\circ}} + frac{n}{4}
+	 x & = \frac{\theta + 90^{\circ}}{\frac{360^{\circ}}{n}}   \\
+	 & = \frac{\theta n + 90^{\circ} n}{360^{\circ}} \\
+	 & = \frac{\theta n}{360^{\circ}} + \frac{n}{4}
 \end{align*}
 
 Plugging in the range for $\theta$,
 
 \begin{align*}
-	frac{n}{4} \leq frac{\theta n}{360^{\circ}} + frac{n}{4} \leq frac{n}{4} + frac{1}{2}
+	\frac{n}{4} \leq \frac{\theta n}{360^{\circ}} + \frac{n}{4} \leq \frac{n}{4} + \frac{1}{2}
 \end{align*}
 
 Substituting $n$ for $4m$, 
 
 \begin{align*}
-	m \leq x \leq m + frac{1}{2}
+	m \leq x \leq m + \frac{1}{2}
 \end{align*}
 
 It can be seen that point $B$ is in triangle $V_{m+1}OV_{m+2}$, and is closer to $V_{m+1}$ than $V_{m+2}$.
@@ -221,7 +221,7 @@ Now, we can find the side length of the square, $s$, from $r$, and by expressing
 	2r^2 \left(1 - \cos \frac{360^{\circ}}{n}\right) & = k^2  \\
 	r & = k\sqrt{\frac{1}{2 - 2\cos\frac{360^{\circ}}{n}}}  \\
 	s & = k\sqrt{\frac{2}{2 - 2\cos\frac{360^{\circ}}{n}}}  \\
-	& = k\sqrt{\frac{1}{1 - 1\cos\frac{360^{\circ}}{n}}}
+	& = k\sqrt{\frac{1}{1 - \cos\frac{360^{\circ}}{n}}}
 \end{align*}
 
 \printbibliography
