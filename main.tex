@@ -57,6 +57,8 @@ This project will only focus on convex polygons.
 \section{Literature Review}
 % stuff...
 
+\pagebreak
+
 \section{Research Question 1}
 
 RQ1 aims to find out the side length of the largest square that can be inscribed in a triangle,
@@ -128,6 +130,8 @@ For obtuse triangles, only one placement exists, i.e. when the square lies on th
 \end{equation}
 where $c$ is the longest side.
 
+\pagebreak
+
 \section{Research Question 2}
 
 RQ2 aims to find out the side length of the largest square that can be inscribed in a convex $n$-gon,
@@ -166,21 +170,21 @@ Furthermore, we can limit this range to $0 \leq \theta \leq \frac{180^{\circ}}{n
 Now, we can try to find $\angle V_{m+1}OB$. To do this, we find the slice of the polygon which contains segment $OB$. We can find the number of triangles that has to be passed through to form $\angle V_{1}OB$. Let this value be $x$. This gives the expression:
 
 \begin{align*}
-	 x = \frac{\theta + 90^{\circ}}{\frac{360^{\circ}}{n}}
+	 x = \frac{\theta + 90^{\circ}}{\frac{\ang{360}}{n}}
 \end{align*}
 
 Simplifying it,
 
 \begin{align*}
-	 x & = \frac{\theta + 90^{\circ}}{\frac{360^{\circ}}{n}}   \\
-	 & = \frac{\theta n + 90^{\circ} n}{360^{\circ}} \\
-	 & = \frac{\theta n}{360^{\circ}} + \frac{n}{4}
+	 x & = \frac{\theta + \ang{90}}{\frac{\ang{360}}{n}}   \\
+	 & = \frac{\theta n + \ang{90} n}{\ang{360}} \\
+	 & = \frac{\theta n}{\ang{360}} + \frac{n}{4}
 \end{align*}
 
 Plugging in the range for $\theta$,
 
 \begin{align*}
-	\frac{n}{4} \leq \frac{\theta n}{360^{\circ}} + \frac{n}{4} \leq \frac{n}{4} + \frac{1}{2}
+	\frac{n}{4} \leq \frac{\theta n}{\ang{360}} + \frac{n}{4} \leq \frac{n}{4} + \frac{1}{2}
 \end{align*}
 
 Substituting $n$ for $4m$, 
@@ -190,17 +194,18 @@ Substituting $n$ for $4m$,
 \end{align*}
 
 It can be seen that point $B$ is in triangle $V_{m+1}OV_{m+2}$, and is closer to $V_{m+1}$ than $V_{m+2}$.
-We can now check for equality between $OA$ and $OB$, as this would render $ABCD$ as a square. To do that, the equality $\angle V_{m+1}OB = \angle V_{1}OA$ must be true.
+We can now check for equality between $OA$ and $OB$, as this would render $ABCD$ as a square.
+To do so, the equality $\angle V_{m+1}OB = \angle V_{1}OA$ must be true.
 
 \begin{align*}
-	\angle V_{m+1}OB & = \theta + 90^{\circ} - m\left(\frac{360^{\circ}}{n}\right)   \\
+	\angle V_{m+1}OB & = \theta + \ang{90} - m\left(\frac{\ang{360}}{n}\right)   \\
 	& = \theta
 \end{align*}
 
 Hence, a square can always be inscribed.
 
-To find the maximum side length of the square, we can maximise $OA$. Let $OV_{1} = r$.
-Using the sine law,
+To find the maximum side length of the square, $OA$ can be maximised. Let $OV_{1} = r$.
+Using the Law of Sines,
 
 \begin{figure}[htpb]
 	\centering
@@ -210,15 +215,15 @@ Using the sine law,
 \end{figure}
 
 \begin{align*}
-	\angle AV_{1}O & = 90^{\circ} - \frac{180^{\circ}}{n}     \\
-	\frac{OA}{\sin \left(90^{\circ} - \frac{180^{\circ}}{n}\right)} & = \frac{r}{\sin \left(180^{\circ} - \theta - \left(90^{\circ} - \frac{180^{\circ}}{n}\right)\right)}  \\
-	\frac{OA}{\cos \frac{180^{\circ}}{n}} & = \frac{r}{\sin \left(\theta + 90^{\circ} - \frac{180^{\circ}}{n}\right)}    \\
-	OA & = \frac{r \cos \frac{180^{\circ}}{n}}{\cos \left(\frac{180^{\circ}}{n} - \theta\right)}
+	\angle AV_{1}O & = \ang{90} - \frac{\ang{180}}{n}     \\
+	\frac{OA}{\sin \left(\ang{90} - \frac{\ang{180}}{n}\right)} & = \frac{r}{\sin \left[\ang{180} - \theta - \left(\ang{90} - \frac{\ang{180}}{n}\right)\right]}  \\
+	\frac{OA}{\cos \frac{\ang{180}}{n}} & = \frac{r}{\sin \left(\theta + \ang{90} - \frac{\ang{180}}{n}\right)}    \\
+	OA & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \theta\right)}
 \end{align*}
 
-Notice how the numerator is fixed. To maximise $OA$, we need to minimise $\cos \left(\frac{180^{\circ}}{n} - \theta\right)$. We need to maximise $\frac{180^{\circ}}{n} - \theta$, hence we have to minimise $\theta$. This can be done when $\theta = 0$.
+Notice how the numerator is fixed. To maximise $OA$, $\cos \left(\frac{\ang{180}}{n} - \theta\right)$ needs to be minimised. $\frac{180^{\circ}}{n} - \theta$ needs to be maximised, hence $\theta$ must be minimised. This can be done when $\theta = 0$.
 
-Now, we can find the side length of the square, $s$, from $r$, and by expressing $r$ from the side length of the entire polygon, $k$, we can find $s$ from $k$ and $n$.
+The side length of the square can be hence found, $s$, from $r$, and by expressing $r$ from the side length of the entire polygon, $k$, $s$ can be found from $k$ and $n$.
 
 \begin{align*}
 	OA & = \frac{r \cos \frac{180^{\circ}}{n}}{\cos \left(\frac{180^{\circ}}{n}\right)}  \\
