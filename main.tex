@@ -116,7 +116,6 @@ Both sides of the fraction can be multiplied by $2Rc$ and the Law of Sines can b
 	  & = \frac{2Rac\sin\angle{B}}{2Ra\sin\angle{B}+2Rc}                                                                       \\
 	  & = \frac{abc}{2Rc+ab}
 \end{align*}
-% We used formulae and theorems such as the sine addition formula and the law of sines to manipulate the expressions. \\
 
 Since each of the sides of the triangle, $a$, $b$ and $c$ can be the longest side,
 the maximum of the three placements can be taken as the solution, hence
@@ -151,7 +150,7 @@ This case deals with the scenario where the number of sides in the $n$-gon is di
 Firstly, for the side length of the square to be maximised, more than one vertex of the square must coincide with the perimeter of the $n$-gon.
 This can be easily seen, because the square can be pushed outwards in the other direction if less than two vertices of the square touch the perimeter of the $n$-gon.
 
-Let the square be $ABCD$, and the polygon be $V_{1}V_{2}...V_{n}$. Also, let \(n = 4m\), where m is an integer.
+Let the square be $ABCD$, and the polygon be $V_{1}V_{2} \cdots V_{n}$. Also, let \(n = 4m\), where $m$ is an integer.
 
 Due to such a polygon being symmetrical both horizontally and vertically, the assumption that the centre of the polygon coincides with the centre of the square can be made. From the earlier observation, it can be assumed that one vertex of the square, $A$, lies on the perimeter of the polygon. Also, due to the polygon being symmetrical both horizontally and vertically, the opposite vertex, $C$, will also lie on the perimeter of the polygon.
 
@@ -162,11 +161,13 @@ Due to such a polygon being symmetrical both horizontally and vertically, the as
 	\caption{The figure for finding possible placements for case 1 of RQ2.}
 \end{figure}
 
-Due to the symmetry, as long as vertex B lies on the perimeter of the polygon, the square can be inscribed. If vertex B lies within the polygon, the square can be fit. We shall find the values of $\theta$ such that the square can be inscribed or fit.
+Due to the symmetry, as long as vertex B lies on the perimeter of the polygon, the square can be inscribed.
+If vertex $B$ lies within the polygon, the square can be fit. We shall find the values of $\theta$ such that the square can be inscribed or fit,
+where $\theta = \angle V_{1}OA$.
 
-Firstly, it can be seen that $V_{1}OV_{2} = V_{2}OV_{3} = ... = V_{n}OV_{1} = \frac{360^{\circ}}{n}$.
-Hence, $0 \leq \theta \leq \frac{360^{\circ}}{n}$.
-Furthermore, we can limit this range to $0 \leq \theta \leq \frac{180^{\circ}}{n}$, as when $\theta \geq \frac{180^{\circ}}{n}$, the diagram can be flipped to reduce $\theta$.
+Firstly, it can be seen that $V_{1}OV_{2} = V_{2}OV_{3} = \cdots = V_{n}OV_{1} = \frac{\ang{360}}{n}$.
+Hence, $0 \leq \theta \leq \frac{\ang{360}}{n}$.
+Furthermore, we can limit this range to $0 \leq \theta \leq \frac{\ang{180}}{n}$, as when $\theta \geq \frac{\ang{180}}{n}$, the diagram can be flipped to reduce $\theta$.
 Now, we can try to find $\angle V_{m+1}OB$. To do this, we find the slice of the polygon which contains segment $OB$. We can find the number of triangles that has to be passed through to form $\angle V_{1}OB$. Let this value be $x$. This gives the expression:
 
 \begin{align*}
@@ -221,7 +222,7 @@ Using the Law of Sines,
 	OA & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \theta\right)}
 \end{align*}
 
-Notice how the numerator is fixed. To maximise $OA$, $\cos \left(\frac{\ang{180}}{n} - \theta\right)$ needs to be minimised. $\frac{180^{\circ}}{n} - \theta$ needs to be maximised, hence $\theta$ must be minimised. This can be done when $\theta = 0$.
+Notice how the numerator is fixed. To maximise $OA$, $\cos \left(\frac{\ang{180}}{n} - \theta\right)$ needs to be minimised. $\frac{\ang{180}}{n} - \theta$ needs to be maximised, hence $\theta$ must be minimised. This can be done when $\theta = 0$.
 
 The side length of the square can be hence found, $s$, from $r$, and by expressing $r$ from the side length of the entire polygon, $k$, $s$ can be found from $k$ and $n$.
 
