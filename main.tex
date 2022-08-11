@@ -1,5 +1,5 @@
 \documentclass[12pt]{scrartcl}
-\usepackage{amsmath, amssymb, amsthm, mathtools,amsthm}
+\usepackage{amsmath, amssymb, amsthm, mathtools}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -158,7 +158,7 @@ Due to such a polygon being symmetrical both horizontally and vertically, the as
 	\centering
 	\includegraphics[scale=.75]{images/rq2_1_1.jpg}
 	\label{fig:rq2_1_1_img}
-	\caption{The figure for finding possible placements for case 1 of RQ2.}
+	\caption{The figure for finding possible placements for Case 1 of RQ2.}
 \end{figure}
 
 Due to the symmetry, as long as vertex B lies on the perimeter of the polygon, the square can be inscribed.
@@ -167,8 +167,8 @@ where $\theta = \angle V_{1}OA$.
 
 Firstly, it can be seen that $V_{1}OV_{2} = V_{2}OV_{3} = \cdots = V_{n}OV_{1} = \frac{\ang{360}}{n}$.
 Hence, $0 \leq \theta \leq \frac{\ang{360}}{n}$.
-Furthermore, we can limit this range to $0 \leq \theta \leq \frac{\ang{180}}{n}$, as when $\theta \geq \frac{\ang{180}}{n}$, the diagram can be flipped to reduce $\theta$.
-Now, we can try to find $\angle V_{m+1}OB$. To do this, we find the slice of the polygon which contains segment $OB$. We can find the number of triangles that has to be passed through to form $\angle V_{1}OB$. Let this value be $x$. This gives the expression:
+Furthermore, we can limit this range to $0 \leq \theta \leq \frac{\ang{180}}{n}$, as when $\theta > \frac{\ang{180}}{n}$, the diagram can be flipped to reduce $\theta$.
+We can then try to find $\angle V_{m+1}OB$. To do this, we find the slice of the polygon which contains segment $OB$. We can find the number of triangles that has to be passed through to form $\angle V_{1}OB$. Let this value be $x$. This gives the expression:
 
 \begin{align*}
 	 x = \frac{\theta + 90^{\circ}}{\frac{\ang{360}}{n}}
