@@ -57,17 +57,17 @@ a previous project completed in 2021, The Bigger The Better. \cite{tbtb1}
 \end{enumerate}
 
 \subsection{Project Scope}
-This project will only focus on convex polygons.
+This project will only focus on convex polygons. Also, all four vertices of the square must lie on the perimeter of the polygon.
 
 \section{Literature Review}
-\cite{tbtb1} gave a crucial insight into the investigation regarding RQ1 — that only three possible placements exist for the largest square within an acute triangle, each placement having one side of the square coinciding with each side of the triangle.
-\cite{chazelle} gave insight and confirmation that fitting a square within a convex n-gon, in turn used for RQ2, was possible.
-\cite{dilworth} allowed us to find an algorithm to check if a $n$-gon can be inscribed in a $m$-gon, given confirmation that doing so was possible.
-\cite{emch} allowed us to prove that a square can always be inscribed inside a convex polygon, which helped us to formulate the ideas used in RQ3.
+\cite{tbtb1} Huo Xi Cheng and Wu Hao (2021) investigated how to find the largest square inscribed in a triangle, splitting it up into acute and obtuse triangles. This would be helpful for RQ1, as it provides insight that only 3 possible placements of an inscribed square exist for an acute triangle.
+\cite{chazelle} Chazelle (1983) investigated how to inscribe a regular $m$-gon in a regular $n$-gon. It showed that it is always possible to inscribe a square in a regular polygon, as well as provide insights on the possible placements of the square.
+\cite{emch} Emch (1916) investigated how to inscribe a square in a closed curve formed by analytic curves. He managed to prove that for all closed curves that could be split into finite numbers of analytic curves, a square could be inscribed. This is helpful as a polygon is a form of a closed curve, and each side is an analytic curve, showing that it is always possible to inscribe a square in a convex polygon.
 
 \pagebreak
 
 \section{Research Question 1}
+What is the side length of the largest square that can be inscribed in a triangle?
 
 RQ1 aims to find out the side length of the largest square that can be inscribed in a triangle,
 given the side lengths of the triangle, $a$, $b$ and $c$.
@@ -140,6 +140,7 @@ where $c$ is the longest side.
 \pagebreak
 
 \section{Research Question 2}
+What is the side length of the largest square that can be inscribed in a regular $n$-gon, given $n \neq 4$?
 
 RQ2 aims to find out the side length of the largest square that can be inscribed in a convex $n$-gon,
 given $n$ and the side length of the $n$-gon, $k$.
@@ -236,11 +237,11 @@ The side length of the square can be hence found, $s$, from $r$, and by expressi
 \begin{align*}
 	OA & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n}\right)}  \\
 	& = r  \\
-	s & = OA\sqrt{2} \\
-	& = r\sqrt{2} \\
 	2r^2 \left(1 - \cos \frac{\ang{360}}{n}\right) & = k^2  \\
 	r & = k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}}  \\
-	s & = k\sqrt{\frac{2}{2 - 2\cos\frac{\ang{360}}{n}}}  \\
+	s & = OA\sqrt{2} \\
+	& = r\sqrt{2} \\
+	& = k\sqrt{\frac{2}{2 - 2\cos\frac{\ang{360}}{n}}}  \\
 	& = k\sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
 \end{align*}
 
@@ -317,11 +318,11 @@ To find the side length of the square, we can use the Law of Sines, similar to C
 \begin{align*}
 	OA & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \frac{\ang{90}}{n}\right)}  \\
 	& = \frac{r \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}  \\
-	s & = OA\sqrt{2} \\
-	& = \frac{r \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}  \\
 	2r^2 \left(1 - \cos \frac{\ang{360}}{n}\right) & = k^2  \\
 	r & = k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}}  \\
-	s & =\frac{k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}} \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}  \\
+	s & = OA\sqrt{2} \\
+	& = \frac{r \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}  \\
+	& =\frac{k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}} \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}  \\
 	& = \frac{k \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}\sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
 \end{align*}
 
@@ -334,7 +335,7 @@ where $k$ is the side length of the $n$-gon.
 \pagebreak
 
 \subsection{Case 3}
-Unlike the previous two cases, an $n$-gon with an odd $n$ is not symmetrical horizontally or vertically, hence we cannot make the assumption that the center of the square coincides with the center of the $n$-gon.
+Unlike the previous two cases, an $n$-gon with an odd $n$ does not have 2 perpendicular lines of symmetry, hence we cannot claim that the center of the square and the center of the polygon coincide.
 
 Currently, we have no way to assume that the square's vertices lie on the perimeter of the $n$-gon.
 This case is still largely a work in progress, and the results obtained so far are inaccurate. However, we have obtained some insights which could aid us in solving this problem.
@@ -362,25 +363,27 @@ The second of these insights will be explained in further detail in RQ3, below. 
 
 \begin{align*}
 	OA & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left(\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8}\right \rfloor\right)\right]\right)\right\rangle}  \\
-	s & = OA\sqrt{2} \\
-	& = \frac{r \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left(\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8}\right\rfloor\right)\right]\right)\right\rangle}  \\
+	k^2 & = 2r^2 \left(1 - \cos \frac{\ang{360}}{n}\right)  \\
+	r & = k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}}  \\
 \end{align*}
 
 \begin{align*}
-	k^2 & = 2r^2 \left(1 - \cos \frac{\ang{360}}{n}\right)  \\
-	r & = k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}}  \\
-	s & = \frac{k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}} \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left(\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor\right)\right]\right)\right\rangle}  \\
-	& = \frac{k \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left(\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor\right)\right]\right)\right\rangle} \sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}} \sqrt{2}
+	s & = OA\sqrt{2} \\
+	& = \frac{r \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left(\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8}\right\rfloor\right)\right]\right)\right\rangle}  \\
+	& = \frac{k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}} \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left(\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor\right)\right]\right)\right\rangle}  \\
+	& = \frac{k \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left(\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor\right)\right]\right)\right\rangle} \sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
 \end{align*}
 
 \section{Research Question 3}
+What is the side length of the largest square that can be inscribed in a convex $n$-gon?
+
 RQ3 aims to find the largest square that can be inscribed in a convex polygon, given the side lengths of the polygon.
 We were unable to find this due to the vagueness of the question. However, we are still able to prove certain things.
 
 \subsection{Proof that a square can always be inscribed}
 We have proved that a square can always be inscribed in a convex polygon.
 
-We first construct an arbitary line $A_{1}A_{2}$. Then, at every vertex, we draw a line parallel to $A_{1}A_{2}$.
+We first construct an arbitary line $A_{1}A_{2}$. 
 
 \begin{figure}[htpb]
 	\centering
@@ -389,7 +392,10 @@ We first construct an arbitary line $A_{1}A_{2}$. Then, at every vertex, we draw
 	\caption{The construction for RQ3.}
 \end{figure}
 
-We can get the midpoint of the newly formed line segments in the polygon, and connect them together. We shall call the line segments that connect the midpoints together the \textbf{first group} of line segments, as shown in Figure 7.
+Then, at every vertex, we draw a line parallel to $A_{1}A_{2}$.
+\pagebreak
+
+We can get the midpoint of the newly formed line segments in the polygon, and connect them together.
 
 \begin{figure}[htpb]
 	\centering
@@ -398,7 +404,11 @@ We can get the midpoint of the newly formed line segments in the polygon, and co
 	\caption{The construction of the first group of line segments.}
 \end{figure}
 
-Now, we draw a line perpendicular to $A_{1}A_{2}$ at every vertex, get the midpoint of the newly formed line segments, and connect them together. We shall call the line segments that connect the midpoints together the \textbf{second group} of line segments, as shown in Figure 8.
+We shall call the line segments that connect the midpoints together the \textbf{first group} of line segments, as shown in Figure 7.
+
+\pagebreak
+
+Now, we draw a line perpendicular to $A_{1}A_{2}$ at every vertex, get the midpoint of the newly formed line segments, and connect them together. 
 
 \begin{figure}[htpb]
 	\centering
@@ -407,8 +417,12 @@ Now, we draw a line perpendicular to $A_{1}A_{2}$ at every vertex, get the midpo
 	\caption{The construction of the second group of line segments.}
 \end{figure}
 
+We shall call the line segments that connect the midpoints together the \textbf{second group} of line segments, as shown in Figure 8.
+
+\pagebreak
+
 Notice how the two groups intersect at one point. Let this point be $O$. We draw a line parallel to $A_{1}A_{2}$ at point $O$.
-We then draw another line perpendicular to $A_{1}A_{2}$ at $O$. Notice how the four intersections between these two lines and the perimeter of the polygon form a rhombus. Let this rhombus be $ABCD$. This is illustrated in Figure 8.
+We then draw another line perpendicular to $A_{1}A_{2}$ at $O$. 
 
 \begin{figure}[htpb]
 	\centering
@@ -416,6 +430,10 @@ We then draw another line perpendicular to $A_{1}A_{2}$ at $O$. Notice how the f
 	\label{fig:rq3_1_4_img}
 	\caption{The construction of the rhombus.}
 \end{figure}
+
+Notice how the four intersections between these two lines and the perimeter of the polygon form a rhombus. Let this rhombus be $ABCD$. This is illustrated in Figure 9.
+
+\pagebreak
 
 Do note that this rhombus need not be a square. However, using the Intermediate Value Theorem, we can show that if $A_{1}A_{2}$ is rotated clockwise enough, the rhombus will be a square.
 
