@@ -58,6 +58,7 @@ This project will only focus on convex polygons.
 \cite{tbtb1} gave a crucial insight into the investigation regarding RQ1 — that only three possible placements exist for the largest square within an acute triangle, each placement having one side of the square coinciding with each side of the triangle.
 \cite{chazelle} gave insight and confirmation that fitting a square within a convex n-gon, in turn used for RQ2, was possible.
 \cite{dilworth} allowed us to find an algorithm to check if a $n$-gon can be inscribed in a $m$-gon, given confirmation that doing so was possible.
+\cite{emch} allowed us to prove that a square can always be inscribed inside a convex polygon, which helped us to formulate the ideas used in RQ3.
 
 \pagebreak
 
@@ -350,15 +351,21 @@ The second of these insights will be explained in further detail in RQ3, below. 
 \end{figure}
 
 \begin{align*}
-  \theta & = \min\left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{\ang{45}}{\frac{\ang{360}}{n}} \rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{\ang{45}}{\frac{\ang{360}}{n}} \rfloor\right)\right)     \\
-  & = \min\left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor\right)\right)     \\
-	OA & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \left(\min\left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor\right)\right)\right)\right)}  \\
+  \theta & = \min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{\ang{45}}{\frac{\ang{360}}{n}} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{\ang{45}}{\frac{\ang{360}}{n}} \rfloor\right)\right]     \\
+  & = \min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \rfloor\right)\right]     \\
+\end{align*}
+
+\begin{align*}
+	OA & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left{\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \rfloor\right)\right]\right}\right\rangle}  \\
 	s & = OA\sqrt{2} \\
-	& = \frac{r \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \left(\min\left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor\right)\right)\right)\right)}  \\
+	& = \frac{r \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left{\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \rfloor\right)\right]\right}\right\rangle}  \\
+\end{align*}
+
+\begin{align*}
 	k^2 & = 2r^2 \left(1 - \cos \frac{\ang{360}}{n}\right)  \\
 	r & = k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}}  \\
-	s & = \frac{k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}} \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \left(\min\left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor\right)\right)\right)\right)}  \\
-	& = \frac{k \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \left(\min\left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor\right)\right)\right)\right)} \sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}} \\
+	s & = \frac{k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}} \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left{\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \rfloor\right)\right]\right}\right\rangle}  \\
+	& = \frac{k \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \left{\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \rfloor\right)\right]\right}\right)} \sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}} \\
 \end{align*}
 
 \section{Research Question 3}
@@ -377,7 +384,7 @@ We first construct an arbitary line $A_{1}A_{2}$. Then, at every vertex, we draw
 	\caption{The construction for RQ3.}
 \end{figure}
 
-We can get the midpoint of the newly formed line segments in the polygon, and connect them together. We shall call the line segments that connect the midpoints together the \textbf{first group} of line segments, as shown in \ref{fig:rq3_1_2_img}.
+We can get the midpoint of the newly formed line segments in the polygon, and connect them together. We shall call the line segments that connect the midpoints together the \textbf{first group} of line segments, as shown in Figure 6.
 
 \begin{figure}[htpb]
 	\centering
@@ -386,7 +393,7 @@ We can get the midpoint of the newly formed line segments in the polygon, and co
 	\caption{The construction of the first group of line segments.}
 \end{figure}
 
-Now, we draw a line perpendicular to $A_{1}A_{2}$ at every vertex, get the midpoint of the newly formed line segments, and connect them together. We shall call the line segments that connect the midpoints together the \textbf{second group} of line segments, as shown in \ref{fig:rq3_1_3_img}.
+Now, we draw a line perpendicular to $A_{1}A_{2}$ at every vertex, get the midpoint of the newly formed line segments, and connect them together. We shall call the line segments that connect the midpoints together the \textbf{second group} of line segments, as shown in Figure 7.
 
 \begin{figure}[htpb]
 	\centering
@@ -395,8 +402,8 @@ Now, we draw a line perpendicular to $A_{1}A_{2}$ at every vertex, get the midpo
 	\caption{The construction of the second group of line segments.}
 \end{figure}
 
-Notice how the 2 groups intersect at one point. Let this point be $O$. We draw a line parallel to $A_{1}A_{2}$ at point $O$.
-We then draw another line perpendicular to $A_{1}A_{2}$ at $O$. Notice how the four intersections between these two lines and the perimeter of the polygon form a rhombus. Let this rhombus be $ABCD$. This is illustrated in \ref{fig:rq3_1_4_img}.
+Notice how the two groups intersect at one point. Let this point be $O$. We draw a line parallel to $A_{1}A_{2}$ at point $O$.
+We then draw another line perpendicular to $A_{1}A_{2}$ at $O$. Notice how the four intersections between these two lines and the perimeter of the polygon form a rhombus. Let this rhombus be $ABCD$. This is illustrated in Figure 8.
 
 \begin{figure}[htpb]
 	\centering
@@ -409,9 +416,7 @@ Do note that this rhombus need not be a square. However, using the Intermediate 
 
 \subsection{Proof for Case 3 of RQ2}
 In RQ2, we mentioned that one side of the square had to be parallel to one side of the polygon. This can be proven using the concept presented above:
-
 We know that a construction where one side of the square is parallel to one side of the polygon exists. In this case, $A_{1}A_{2}$ is $\ang{45}$ away from the base of the polygon. It can be seen that by making the angle between $A_{1}A_{2}$ and the base of the polygon smaller, 2 of the angles of the rhombus will increase, and 2 will decrease and vice versa.
-
 Hence, the only occurrence where the rhombus is a square and all four angles of the rhombus are equal is when $A_{1}A_{2}$ is $\ang{45}$ away from the base of the polygon.
 
 \section{Conclusion and Further Work}
