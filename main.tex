@@ -142,8 +142,7 @@ This problem can be further split into four cases.
 \begin{enumerate}
 	\item when \(n \equiv 0\) (mod $4$),
 	\item when \(n \equiv 2\) (mod $4$),
-	\item when \(n \equiv 1\) (mod $4$),
-	\item when \(n \equiv 3\) (mod $4$). 
+	\item when $n$ is odd.
 \end{enumerate}
 
 \subsection{Case 1}
@@ -325,6 +324,21 @@ Hence, the expression for the side length of the largest square in such a polygo
 \frac{k \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}\sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
 \end{equation}
 where $k$ is the side length of the $n$-gon.
+
+\pagebreak
+
+\subsection{Case 3}
+Unlike the previous two cases, an $n$-gon with an odd $n$ is not symmetrical horizontally or vertically, hence we cannot make the assumption that the center of the square coincides with the center of the $n$-gon.
+
+Currently, we have no way to assume that the square's vertices lie on the perimeter of the $n$-gon.
+This case is still largely a work in progress, and the results obtained so far are inaccurate. However, we have obtained some insights which could aid us in solving this problem.
+
+\begin{itemize}
+\item The center of the square cannot coincide with the center of the $n$-gon.
+\item One side of the square must be parallel to one side of the $n$-gon.
+\end{itemize}
+
+The second of these insights will be explained in further detail in RQ3, below.
 
 \printbibliography
 \end{document}
