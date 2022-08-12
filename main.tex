@@ -338,9 +338,9 @@ This case is still largely a work in progress, and the results obtained so far a
 \item One side of the square must be parallel to one side of the $n$-gon.
 \end{itemize}
 
-The first of these insights has a simple proof: there are no 2 parallel lines of symmetry for such a regular polygon, hence if the center of the square were to coincide with the center of the polygon, at least 2 vertices of the square would not lie on the perimeter of the polygon.
+The first of these insights has a simple proof: there are no two parallel lines of symmetry for such a regular polygon, hence if the center of the square were to coincide with the center of the polygon, at least two vertices of the square would not lie on the perimeter of the polygon.
 
-The second of these insights will be explained in further detail in RQ3, below. For now, we shall take it that this statement is true. We can hence calculate the side length using a similar concept to the previous 2 cases. Do note that we also have to account for when $\theta$ lies on the left of the triangle instead of the right.
+The second of these insights will be explained in further detail in RQ3, below. For now, we shall take it that this statement is true. We can hence calculate the side length using a similar concept to the previous two cases. Furthermore, we also have to account for when $\theta$ lies on the left of the triangle instead of the right.
 
 \begin{figure}[htpb]
 	\centering
@@ -366,7 +366,7 @@ RQ3 aims to find the largest square that can be inscribed in a convex polygon, g
 We were unable to find this due to the vagueness of the question. However, we are still able to prove certain things.
 
 \subsection{Proof that a square can always be inscribed}
-A proof that a square can always be inscribed in a convex polygon exists. It goes like this:
+We have proved that a square can always be inscribed in a convex polygon.
 
 We first construct an arbitary line $A_{1}A_{2}$. Then, at every vertex, we draw a line parallel to $A_{1}A_{2}$.
 
@@ -377,7 +377,7 @@ We first construct an arbitary line $A_{1}A_{2}$. Then, at every vertex, we draw
 	\caption{The construction for RQ3.}
 \end{figure}
 
-Now, we get the midpoint of the newly formed line segments in the polygon, and connect them together. We shall call the line segments that connect the midpoints together the first group of line segments.
+We can get the midpoint of the newly formed line segments in the polygon, and connect them together. We shall call the line segments that connect the midpoints together the \textbf{first group} of line segments, as shown in \ref{fig:rq3_1_2_img}.
 
 \begin{figure}[htpb]
 	\centering
@@ -386,7 +386,7 @@ Now, we get the midpoint of the newly formed line segments in the polygon, and c
 	\caption{The construction of the first group of line segments.}
 \end{figure}
 
-Now, we draw a line perpendicular to $A_{1}A_{2}$ at every vertex, get the midpoint of the newly formed line segments, and connect them together. We shall call the line segments that connect the midpoints together the second group of line segments.
+Now, we draw a line perpendicular to $A_{1}A_{2}$ at every vertex, get the midpoint of the newly formed line segments, and connect them together. We shall call the line segments that connect the midpoints together the \textbf{second group} of line segments, as shown in \ref{fig:rq3_1_3_img}.
 
 \begin{figure}[htpb]
 	\centering
@@ -395,7 +395,8 @@ Now, we draw a line perpendicular to $A_{1}A_{2}$ at every vertex, get the midpo
 	\caption{The construction of the second group of line segments.}
 \end{figure}
 
-Notice how the 2 groups intersect at one point. Let this point be O. We draw a line parallel to $A_{1}A_{2}$ at point O. We then draw another line perpendicular to $A_{1}A_{2}$ at O. Notice how the 4 intersection between these 2 lines and the perimeter of the polygon form a rhombus. Let this rhombus be ABCD.
+Notice how the 2 groups intersect at one point. Let this point be $O$. We draw a line parallel to $A_{1}A_{2}$ at point $O$.
+We then draw another line perpendicular to $A_{1}A_{2}$ at $O$. Notice how the four intersections between these two lines and the perimeter of the polygon form a rhombus. Let this rhombus be $ABCD$. This is illustrated in \ref{fig:rq3_1_4_img}.
 
 \begin{figure}[htpb]
 	\centering
@@ -404,15 +405,17 @@ Notice how the 2 groups intersect at one point. Let this point be O. We draw a l
 	\caption{The construction of the rhombus.}
 \end{figure}
 
-Do note that this rhombus need not be a square. However, using the intermediate value theorem, we can show that $A_{1}A_{2}$ is rotated clockwise enough, the rhombus will be a square.
+Do note that this rhombus need not be a square. However, using the Intermediate Value Theorem, we can show that if $A_{1}A_{2}$ is rotated clockwise enough, the rhombus will be a square.
 
-\subsection{Proof for case 3 of RQ2}
-In RQ2, we mentioned that one side of the square had to be parallel to one side of the polygon. This can be proven using the concept present above:
+\subsection{Proof for Case 3 of RQ2}
+In RQ2, we mentioned that one side of the square had to be parallel to one side of the polygon. This can be proven using the concept presented above:
 
-We know that a construction where one side of the square is parallel to one side of the polygon exists. In this case, $A_{1}A_{2}$ is $\ang{45}$ away from the base of the polygon. It can be seen that by making the angle between $A_{1}A_{2}$ and the base of the polygon smaller, 2 of the angles of the rhombus will increase, and 2 will decrease and vice versa. Hence, the only occurenece where the rhombus is a square and all 4 angles of the rhombus are equal is when $A_{1}A_{2}$ is $\ang{45}$ away from the base of the polygon.
+We know that a construction where one side of the square is parallel to one side of the polygon exists. In this case, $A_{1}A_{2}$ is $\ang{45}$ away from the base of the polygon. It can be seen that by making the angle between $A_{1}A_{2}$ and the base of the polygon smaller, 2 of the angles of the rhombus will increase, and 2 will decrease and vice versa.
 
-\section{Conclusion}
-We were able to solve most of our research questions. However, as research question 3 was very vague, it was more difficult than the others, leading to us being unable to complete it. One potential continuation of the project is that, besides completing research question 3, we can also address concave polygons, or even curves. Such a continuation would be able to address things such as the inscribed square problem. 
+Hence, the only occurrence where the rhombus is a square and all four angles of the rhombus are equal is when $A_{1}A_{2}$ is $\ang{45}$ away from the base of the polygon.
+
+\section{Conclusion and Further Work}
+All in all, we were able to solve most of our research questions. However, as RQ3 was very vague, it was more difficult than the others, leading to us being unable to complete it. One potential continuation of the project is that, besides completing RQ3, we can also address concave polygons, or even curves. Such a continuation would be able to address things such as the inscribed square problem. Other possible extension methods would be to extend this problem to 3D space, for example, by fitting cubes into prisms with different $n$-gons as bases.   
 
 \printbibliography
 \end{document}
