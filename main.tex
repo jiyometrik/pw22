@@ -338,7 +338,73 @@ This case is still largely a work in progress, and the results obtained so far a
 \item One side of the square must be parallel to one side of the $n$-gon.
 \end{itemize}
 
-The second of these insights will be explained in further detail in RQ3, below.
+The first of these insights has a simple proof: there are no 2 parallel lines of symmetry for such a regular polygon, hence if the center of the square were to coincide with the center of the polygon, at least 2 vertices of the square would not lie on the perimeter of the polygon.
+
+The second of these insights will be explained in further detail in RQ3, below. For now, we shall take it that this statement is true. We can hence calculate the side length using a similar concept to the previous 2 cases. Do note that we also have to account for when $\theta$ lies on the left of the triangle instead of the right.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=.75]{images/rq2_3.jpg}
+	\label{fig:rq2_3_img}
+	\caption{The construction for case 3 of RQ2.}
+\end{figure}
+
+\begin{align*}
+  \theta & = \min\left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{\ang{45}}{\frac{\ang{360}}{n}} \rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{\ang{45}}{\frac{\ang{360}}{n}} \rfloor\right)\right)     \\
+  & = \min\left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor\right)\right)     \\
+	OA & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \left(\min\left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor\right)\right)\right)\right)}  \\
+	s & = OA\sqrt{2} \\
+	& = \frac{r \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \left(\min\left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor\right)\right)\right)\right)}  \\
+	2r^2 \left(1 - \cos \frac{\ang{360}}{n}\right) & = k^2  \\
+	r & = k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}}  \\
+	s & = \frac{k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}} \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \left(\min\left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor\right)\right)\right)\right)}  \\
+	& = \frac{k \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \left(\min\left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\lfloor \frac{n}{8} \rfloor\right)\right)\right)\right)} \sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}} \\
+\end{align*}
+
+\section{Research Question 3}
+RQ3 aims to find the largest square that can be inscribed in a convex polygon, given the side lengths of the polygon.
+We were unable to find this due to the vagueness of the question. However, we are still able to prove certain things.
+
+\subsection{Proof that a square can always be inscribed}
+A proof that a square can always be inscribed in a convex polygon exists. It goes like this:
+
+We first construct an arbitary line $A_{1}A_{2}$. Then, at every vertex, we draw a line parallel to $A_{1}A_{2}$.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=.75]{images/rq3_1_1.jpg}
+	\label{fig:rq3_1_1_img}
+	\caption{The construction for RQ3.}
+\end{figure}
+
+Now, we get the midpoint of the newly formed line segments in the polygon, and connect them together. We shall call the line segments that connect the midpoints together the first group of line segments.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=.75]{images/rq3_1_2.jpg}
+	\label{fig:rq3_1_2_img}
+	\caption{The construction of the first group of line segments.}
+\end{figure}
+
+Now, we draw a line perpendicular to $A_{1}A_{2}$ at every vertex, get the midpoint of the newly formed line segments, and connect them together. We shall call the line segments that connect the midpoints together the second group of line segments.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=.75]{images/rq3_1_3.jpg}
+	\label{fig:rq3_1_3_img}
+	\caption{The construction of the second group of line segments.}
+\end{figure}
+
+Notice how the 2 groups intersect at one point. Let this point be O. We draw a line parallel to $A_{1}A_{2}$ at point O. We then draw another line perpendicular to $A_{1}A_{2}$ at O. Notice how the 4 intersection between these 2 lines and the perimeter of the polygon form a rhombus. Let this rhombus be ABCD.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=.75]{images/rq3_1_4.jpg}
+	\label{fig:rq3_1_4_img}
+	\caption{The construction of the rhombus.}
+\end{figure}
+
+Do note that this rhombus need not be a square. However, using the intermediate value theorem, we can show that $A_{1}A_{2}$ is rotated clockwise enough, the rhombus will be a square.
 
 \printbibliography
 \end{document}
