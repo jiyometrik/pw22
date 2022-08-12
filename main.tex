@@ -237,5 +237,78 @@ The side length of the square can be hence found, $s$, from $r$, and by expressi
 	& = k\sqrt{\frac{1}{1 - \cos\frac{360^{\circ}}{n}}}
 \end{align*}
 
+\subsection{Case 2}
+This case deals with the scenario where the number of sides in the $n$-gon is divisible by $2$ but not $4$.
+
+Similar to case 1, more than one vertex of the square must coincide with the perimeter of the $n$-gon.
+
+Let the square be $ABCD$, and the polygon be $V_{1}V_{2} \cdots V_{n}$. Also, let \(n = 4m + 2\), where $m$ is an integer.
+
+Due to such a polygon being symmetrical both horizontally and vertically, the assumption that the centre of the polygon coincides with the centre of the square can be made. From the earlier observation, it can be assumed that one vertex of the square, $A$, lies on the perimeter of the polygon. Also, due to the polygon being symmetrical both horizontally and vertically, the opposite vertex, $C$, will also lie on the perimeter of the polygon.
+
+\begin{figure}[htpb]
+	\centering
+	\includegraphics[scale=.75]{images/rq2_2_1.jpg}
+	\label{fig:rq2_2_1_img}
+	\caption{The figure for finding possible placements for Case 2 of RQ2.}
+\end{figure}
+
+Similarly, due to the symmetry, as long as vertex B lies on the perimeter of the polygon, the square can be inscribed.
+If vertex $B$ lies within the polygon, the square can be fit. We shall find the values of $\theta$ such that the square can be inscribed or fit,
+where $\theta = \angle V_{1}OA$.
+
+We still have the range $0 \leq \theta \leq \frac{\ang{180}}{n}$.
+We can then try to find $\angle V_{m+1}OB$. To do this, we can once again find the slice of the polygon which contains segment $OB$. We can find the number of triangles that has to be passed through to form $\angle V_{1}OB$. Let this value be $x$. This gives the expression:
+
+\begin{align*}
+	 x = \frac{\theta + 90^{\circ}}{\frac{\ang{360}}{n}}
+\end{align*}
+
+Simplifying it,
+
+\begin{align*}
+	 x & = \frac{\theta + \ang{90}}{\frac{\ang{360}}{n}}   \\
+	 & = \frac{\theta n + \ang{90} n}{\ang{360}} \\
+	 & = \frac{\theta n}{\ang{360}} + \frac{n}{4}
+\end{align*}
+
+Plugging in the range for $\theta$,
+
+\begin{align*}
+	\frac{n}{4} \leq \frac{\theta n}{\ang{360}} + \frac{n}{4} \leq \frac{n}{4} + \frac{1}{2}
+\end{align*}
+
+Substituting $n$ for $4m + 2$, 
+
+\begin{align*}
+	m + \frac{1}{2} \leq x \leq m + 1
+\end{align*}
+
+It can be seen that point $B$ is in triangle $V_{m+1}OV_{m+2}$, and is closer to $V_{m+2}$ than $V_{m+1}$.
+We can now check for equality between $OA$ and $OB$, as this would render $ABCD$ as a square.
+To do so, the equality $\angle V_{m+2}OB = \angle V_{1}OA$ must be true.
+
+\begin{align*}
+	\angle V_{m+2}OB & = \left(m+1\right)\left(\frac{\ang{360}}{n}\right) - \ang{90} - \theta \\
+	2\theta & = \frac{\ang{360}\left(m+1\right)}{4m+2} - \ang{90}   \\
+	2\theta & = \frac{\ang{180}}{4m+2}    \\
+	\theta & = \frac{\ang{90}}{n}
+\end{align*}
+
+Hence, a square can be inscribed when $\theta = \frac{\ang{90}}{n}$.
+
+To find the side length of the square, we can use the law of sines, similar to case 1. We have:
+
+\begin{align*}
+	OA & = \frac{r \cos \frac{180^{\circ}}{n}}{\cos \left(\frac{180^{\circ}}{n} - \frac{90^{\circ}}{n}\right)}  \\
+	& = \frac{r \cos \frac{180^{\circ}}{n}}{\cos \frac{90^{\circ}}{n}}  \\
+	s & = OA\sqrt{2} \\
+	& = \frac{r \sqrt{2} \cos \frac{180^{\circ}}{n}}{\cos \frac{90^{\circ}}{n}}  \\
+	2r^2 \left(1 - \cos \frac{360^{\circ}}{n}\right) & = k^2  \\
+	r & = k\sqrt{\frac{1}{2 - 2\cos\frac{360^{\circ}}{n}}}  \\
+	s & =\frac{k\sqrt{\frac{1}{2 - 2\cos\frac{360^{\circ}}{n}}} \sqrt{2} \cos \frac{180^{\circ}}{n}}{\cos \frac{90^{\circ}}{n}}  \\
+	& = \frac{k\sqrt{\frac{1}{1 - \cos\frac{360^{\circ}}{n}}} \cos \frac{180^{\circ}}{n}}{\cos \frac{90^{\circ}}{n}}
+\end{align*}
+
 \printbibliography
 \end{document}
