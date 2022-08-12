@@ -239,10 +239,18 @@ The side length of the square can be hence found, $s$, from $r$, and by expressi
 	& = k\sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
 \end{align*}
 
+Hence, the side length for a square in such a $n$-gon would be
+\begin{equation}
+k\sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
+\end{equation}
+where $k$ is the side length of the $n$-gon.
+
+\pagebreak
+
 \subsection{Case 2}
 This case deals with the scenario where the number of sides in the $n$-gon is divisible by $2$ but not $4$.
 
-Similar to case 1, more than one vertex of the square must coincide with the perimeter of the $n$-gon.
+Similar to Case 1 ($4\mid n$), more than one vertex of the square must coincide with the perimeter of the $n$-gon.
 
 Let the square be $ABCD$, and the polygon be $V_{1}V_{2} \cdots V_{n}$. Also, let \(n = 4m + 2\), where $m$ is an integer.
 
@@ -286,7 +294,7 @@ Substituting $n$ for $4m + 2$,
 	m + \frac{1}{2} \leq x \leq m + 1
 \end{align*}
 
-It can be seen that point $B$ is in triangle $V_{m+1}OV_{m+2}$, and is closer to $V_{m+2}$ than $V_{m+1}$.
+It can be seen that point $B$ is in $\triangle V_{m+1}OV_{m+2}$, and is closer to $V_{m+2}$ than $V_{m+1}$.
 We can now check for equality between $OA$ and $OB$, as this would render $ABCD$ as a square.
 To do so, the equality $\angle V_{m+2}OB = \angle V_{1}OA$ must be true.
 
@@ -299,7 +307,7 @@ To do so, the equality $\angle V_{m+2}OB = \angle V_{1}OA$ must be true.
 
 Hence, a square can be inscribed when $\theta = \frac{\ang{90}}{n}$.
 
-To find the side length of the square, we can use the law of sines, similar to case 1. We have:
+To find the side length of the square, we can use the Law of Sines, similar to Case 1. We have:
 
 \begin{align*}
 	OA & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \frac{\ang{90}}{n}\right)}  \\
@@ -312,52 +320,11 @@ To find the side length of the square, we can use the law of sines, similar to c
 	& = \frac{k \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}\sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
 \end{align*}
 
-%do rq3 first cuz its more impt.
-
-\section{Research Question 3}
-RQ3 aims to find the largest square that can be inscribed in a convex polygon, given the side lengths of the polygon.
-We were unable to find this due to the vagueness of the question. However, we are still able to prove certain things.
-
-\subsection{Proof that a square can always be inscribed}
-A proof that a square can always be inscribed in a convex polygon exists. It goes like this:
-
-We first construct an arbitary line $A_{1}A_{2}$. Then, at every vertex, we draw a line parallel to $A_{1}A_{2}$.
-
-\begin{figure}[htpb]
-	\centering
-	\includegraphics[scale=.75]{images/rq3_1_1.jpg}
-	\label{fig:rq3_1_1_img}
-	\caption{The construction for RQ3.}
-\end{figure}
-
-Now, we get the midpoint of the newly formed line segments in the polygon, and connect them together. We shall call the line segments that connect the midpoints together the first group of line segments.
-
-\begin{figure}[htpb]
-	\centering
-	\includegraphics[scale=.75]{images/rq3_1_2.jpg}
-	\label{fig:rq3_1_2_img}
-	\caption{The construction of the first group of line segments.}
-\end{figure}
-
-Now, we draw a line perpendicular to $A_{1}A_{2}$ at every vertex, get the midpoint of the newly formed line segments, and connect them together. We shall call the line segments that connect the midpoints together the second group of line segments.
-
-\begin{figure}[htpb]
-	\centering
-	\includegraphics[scale=.75]{images/rq3_1_3.jpg}
-	\label{fig:rq3_1_3_img}
-	\caption{The construction of the second group of line segments.}
-\end{figure}
-
-Notice how the 2 groups intersect at one point. Let this point be O. We draw a line parallel to $A_{1}A_{2}$ at point O. We then draw another line perpendicular to $A_{1}A_{2}$ at O. Notice how the 4 intersection between these 2 lines and the perimeter of the polygon form a rhombus. Let this rhombus be ABCD.
-
-\begin{figure}[htpb]
-	\centering
-	\includegraphics[scale=.75]{images/rq3_1_4.jpg}
-	\label{fig:rq3_1_4_img}
-	\caption{The construction of the rhombus.}
-\end{figure}
-
-Do note that this rhombus need not be a square. However, using the intermediate value theorem, we can show that $A_{1}A_{2}$ is rotated clockwise enough, the rhombus will be a square.
+Hence, the expression for the side length of the largest square in such a polygon would be
+\begin{equation}
+\frac{k \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}\sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
+\end{equation}
+where $k$ is the side length of the $n$-gon.
 
 \printbibliography
 \end{document}
