@@ -171,7 +171,7 @@ Furthermore, we can limit this range to $0 \leq \theta \leq \frac{\ang{180}}{n}$
 We can then try to find $\angle V_{m+1}OB$. To do this, we find the slice of the polygon which contains segment $OB$. We can find the number of triangles that has to be passed through to form $\angle V_{1}OB$. Let this value be $x$. This gives the expression:
 
 \begin{align*}
-	 x = \frac{\theta + 90^{\circ}}{\frac{\ang{360}}{n}}
+	 x = \frac{\theta + \ang{90}}{\frac{\ang{360}}{n}}
 \end{align*}
 
 Simplifying it,
@@ -227,14 +227,14 @@ Notice how the numerator is fixed. To maximise $OA$, $\cos \left(\frac{\ang{180}
 The side length of the square can be hence found, $s$, from $r$, and by expressing $r$ from the side length of the entire polygon, $k$, $s$ can be found from $k$ and $n$.
 
 \begin{align*}
-	OA & = \frac{r \cos \frac{180^{\circ}}{n}}{\cos \left(\frac{180^{\circ}}{n}\right)}  \\
+	OA & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n}\right)}  \\
 	& = r  \\
 	s & = OA\sqrt{2} \\
 	& = r\sqrt{2} \\
-	2r^2 \left(1 - \cos \frac{360^{\circ}}{n}\right) & = k^2  \\
-	r & = k\sqrt{\frac{1}{2 - 2\cos\frac{360^{\circ}}{n}}}  \\
-	s & = k\sqrt{\frac{2}{2 - 2\cos\frac{360^{\circ}}{n}}}  \\
-	& = k\sqrt{\frac{1}{1 - \cos\frac{360^{\circ}}{n}}}
+	2r^2 \left(1 - \cos \frac{\ang{360}}{n}\right) & = k^2  \\
+	r & = k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}}  \\
+	s & = k\sqrt{\frac{2}{2 - 2\cos\frac{\ang{360}}{n}}}  \\
+	& = k\sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
 \end{align*}
 
 \subsection{Case 2}
@@ -261,7 +261,7 @@ We still have the range $0 \leq \theta \leq \frac{\ang{180}}{n}$.
 We can then try to find $\angle V_{m+1}OB$. To do this, we can once again find the slice of the polygon which contains segment $OB$. We can find the number of triangles that has to be passed through to form $\angle V_{1}OB$. Let this value be $x$. This gives the expression:
 
 \begin{align*}
-	 x = \frac{\theta + 90^{\circ}}{\frac{\ang{360}}{n}}
+	 x = \frac{\theta + \ang{90}}{\frac{\ang{360}}{n}}
 \end{align*}
 
 Simplifying it,
@@ -300,14 +300,14 @@ Hence, a square can be inscribed when $\theta = \frac{\ang{90}}{n}$.
 To find the side length of the square, we can use the law of sines, similar to case 1. We have:
 
 \begin{align*}
-	OA & = \frac{r \cos \frac{180^{\circ}}{n}}{\cos \left(\frac{180^{\circ}}{n} - \frac{90^{\circ}}{n}\right)}  \\
-	& = \frac{r \cos \frac{180^{\circ}}{n}}{\cos \frac{90^{\circ}}{n}}  \\
+	OA & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \frac{\ang{90}}{n}\right)}  \\
+	& = \frac{r \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}  \\
 	s & = OA\sqrt{2} \\
-	& = \frac{r \sqrt{2} \cos \frac{180^{\circ}}{n}}{\cos \frac{90^{\circ}}{n}}  \\
-	2r^2 \left(1 - \cos \frac{360^{\circ}}{n}\right) & = k^2  \\
-	r & = k\sqrt{\frac{1}{2 - 2\cos\frac{360^{\circ}}{n}}}  \\
-	s & =\frac{k\sqrt{\frac{1}{2 - 2\cos\frac{360^{\circ}}{n}}} \sqrt{2} \cos \frac{180^{\circ}}{n}}{\cos \frac{90^{\circ}}{n}}  \\
-	& = \frac{k\sqrt{\frac{1}{1 - \cos\frac{360^{\circ}}{n}}} \cos \frac{180^{\circ}}{n}}{\cos \frac{90^{\circ}}{n}}
+	& = \frac{r \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}  \\
+	2r^2 \left(1 - \cos \frac{\ang{360}}{n}\right) & = k^2  \\
+	r & = k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}}  \\
+	s & =\frac{k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}} \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}  \\
+	& = \frac{k\sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}} \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}
 \end{align*}
 
 \printbibliography
