@@ -21,22 +21,19 @@
 \usepackage{hyperref}
 
 \title{The Bigger The Better II}
-\author{Group 8-29}
-\date{Derrick Lukimin (L, 2i204), Tan Yong Yih (2i222), Wu Hao (2i324), Darren Yap (2i425)}
+\subtitle{Group 8--29}
+\date{2022}
+\author{
+	Derrick Lukimin (L, 2i204) \and Tan Yong Yih (2i222) \and
+	Wu Hao (2i324) \and Darren Yap (2i425)
+}
+\publishers{Hwa Chong Institution (High School)}
 
 \begin{document}
-\onehalfspacing
+\doublespacing
 \maketitle
-\begin{center}
-\Large
-2022 \\ 
-Hwa Chong Institution
-\end{center}
-
 \pagebreak
-
 \tableofcontents
-
 \pagebreak
 
 \section{Introduction}
@@ -106,8 +103,8 @@ Side $c$ can be formed with the sum of $s$, $s \cot A$ and $s \cot \angle{B}$.
 Hence, we can express $s$ with the side length $c$, as well as angles $A$ and $B$.
 
 \begin{align*}
-	c & = s+s\cot \angle{A}+s\cot \angle{B}          \\
-	s & = \frac{c}{1+\cot \angle{A}+\cot \angle{B}}                                                                            
+	c & = s+s\cot \angle{A}+s\cot \angle{B}         \\
+	s & = \frac{c}{1+\cot \angle{A}+\cot \angle{B}}
 \end{align*}
 
 Both sides of the fraction can be multiplied by $\sin A \sin B$. Following which, the
@@ -118,15 +115,15 @@ Sine Addition Formula can be applied.
 	  & = \frac{c\sin\angle{A}\sin\angle{B}}{\sin\angle{A}\sin\angle{B}+\cos\angle{A}\sin\angle{B}+\sin\angle{A}\cos\angle{B}} \\
 	  & = \frac{c\sin\angle{A}\sin\angle{B}}{\sin\angle{A}\sin\angle{B}+\sin\left(\angle{A}+\angle{B}\right)}                  \\
 	  & = \frac{c\sin\angle{A}\sin\angle{B}}{\sin\angle{A}\sin\angle{B}+\sin\left(180-\angle C\right)}                         \\
-	  & = \frac{c\sin\angle{A}\sin\angle{B}}{\sin\angle{A}\sin\angle{B}+\sin \angle C}                                         
+	  & = \frac{c\sin\angle{A}\sin\angle{B}}{\sin\angle{A}\sin\angle{B}+\sin \angle C}
 \end{align*}
 
 Both sides of the fraction can be multiplied by $2Rc$ and the Law of Sines can be used to simplify.
 
 \begin{align*}
-	 s & = \frac{2Rc\sin\angle{A}\sin\angle{B}}{2R\sin\angle{A}\sin \angle{B}+2R\sin \angle C}                                  \\
-	  & = \frac{ac\sin\angle{B}}{a\sin\angle{B}+c}                                                                             \\
-	  & = \frac{2Rac\sin\angle{B}}{2Ra\sin\angle{B}+2Rc}                                                                       \\
+	s & = \frac{2Rc\sin\angle{A}\sin\angle{B}}{2R\sin\angle{A}\sin \angle{B}+2R\sin \angle C} \\
+	  & = \frac{ac\sin\angle{B}}{a\sin\angle{B}+c}                                            \\
+	  & = \frac{2Rac\sin\angle{B}}{2Ra\sin\angle{B}+2Rc}                                      \\
 	  & = \frac{abc}{2Rc+ab}
 \end{align*}
 
@@ -184,15 +181,15 @@ Furthermore, we can limit this range to $0 \leq \theta \leq \frac{\ang{180}}{n}$
 We can then try to find $\angle V_{m+1}OB$. To do this, we find the slice of the polygon which contains segment $OB$. We can find the number of triangles that has to be passed through to form $\angle V_{1}OB$. Let this value be $x$. This gives the expression:
 
 \begin{align*}
-	 x = \frac{\theta + \ang{90}}{\frac{\ang{360}}{n}}
+	x = \frac{\theta + \ang{90}}{\frac{\ang{360}}{n}}
 \end{align*}
 
 Simplifying it,
 
 \begin{align*}
-	 x & = \frac{\theta + \ang{90}}{\frac{\ang{360}}{n}}   \\
-	 & = \frac{\theta n + \ang{90} n}{\ang{360}} \\
-	 & = \frac{\theta n}{\ang{360}} + \frac{n}{4}
+	x & = \frac{\theta + \ang{90}}{\frac{\ang{360}}{n}} \\
+	  & = \frac{\theta n + \ang{90} n}{\ang{360}}       \\
+	  & = \frac{\theta n}{\ang{360}} + \frac{n}{4}
 \end{align*}
 
 Plugging in the range for $\theta$,
@@ -201,7 +198,7 @@ Plugging in the range for $\theta$,
 	\frac{n}{4} \leq \frac{\theta n}{\ang{360}} + \frac{n}{4} \leq \frac{n}{4} + \frac{1}{2}
 \end{align*}
 
-Substituting $n$ for $4m$, 
+Substituting $n$ for $4m$,
 
 \begin{align*}
 	m \leq x \leq m + \frac{1}{2}
@@ -212,8 +209,8 @@ We can now check for equality between $OA$ and $OB$, as this would render $ABCD$
 To do so, the equality $\angle V_{m+1}OB = \angle V_{1}OA$ must be true.
 
 \begin{align*}
-	\angle V_{m+1}OB & = \theta + \ang{90} - m\left(\frac{\ang{360}}{n}\right)   \\
-	& = \theta
+	\angle V_{m+1}OB & = \theta + \ang{90} - m\left(\frac{\ang{360}}{n}\right) \\
+	                 & = \theta
 \end{align*}
 
 Hence, a square can always be inscribed.
@@ -229,10 +226,10 @@ Using the Law of Sines,
 \end{figure}
 
 \begin{align*}
-	\angle AV_{1}O & = \ang{90} - \frac{\ang{180}}{n}     \\
-	\frac{OA}{\sin \left(\ang{90} - \frac{\ang{180}}{n}\right)} & = \frac{r}{\sin \left[\ang{180} - \theta - \left(\ang{90} - \frac{\ang{180}}{n}\right)\right]}  \\
-	\frac{OA}{\cos \frac{\ang{180}}{n}} & = \frac{r}{\sin \left(\theta + \ang{90} - \frac{\ang{180}}{n}\right)}    \\
-	OA & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \theta\right)}
+	\angle AV_{1}O                                              & = \ang{90} - \frac{\ang{180}}{n}                                                               \\
+	\frac{OA}{\sin \left(\ang{90} - \frac{\ang{180}}{n}\right)} & = \frac{r}{\sin \left[\ang{180} - \theta - \left(\ang{90} - \frac{\ang{180}}{n}\right)\right]} \\
+	\frac{OA}{\cos \frac{\ang{180}}{n}}                         & = \frac{r}{\sin \left(\theta + \ang{90} - \frac{\ang{180}}{n}\right)}                          \\
+	OA                                                          & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \theta\right)}
 \end{align*}
 
 Notice how the numerator is fixed. To maximise $OA$, $\cos \left(\frac{\ang{180}}{n} - \theta\right)$ needs to be minimised. $\frac{\ang{180}}{n} - \theta$ needs to be maximised, hence $\theta$ must be minimised. This can be done when $\theta = 0$.
@@ -240,19 +237,19 @@ Notice how the numerator is fixed. To maximise $OA$, $\cos \left(\frac{\ang{180}
 The side length of the square can be hence found, $s$, from $r$, and by expressing $r$ from the side length of the entire polygon, $k$, $s$ can be found from $k$ and $n$.
 
 \begin{align*}
-	OA & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n}\right)}  \\
-	& = r  \\
-	2r^2 \left(1 - \cos \frac{\ang{360}}{n}\right) & = k^2  \\
-	r & = k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}}  \\
-	s & = OA\sqrt{2} \\
-	& = r\sqrt{2} \\
-	& = k\sqrt{\frac{2}{2 - 2\cos\frac{\ang{360}}{n}}}  \\
-	& = k\sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
+	OA                                             & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n}\right)} \\
+	                                               & = r                                                                        \\
+	2r^2 \left(1 - \cos \frac{\ang{360}}{n}\right) & = k^2                                                                      \\
+	r                                              & = k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}}                           \\
+	s                                              & = OA\sqrt{2}                                                               \\
+	                                               & = r\sqrt{2}                                                                \\
+	                                               & = k\sqrt{\frac{2}{2 - 2\cos\frac{\ang{360}}{n}}}                           \\
+	                                               & = k\sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
 \end{align*}
 
 Hence, the side length for a square in such a $n$-gon would be
 \begin{equation}
-k\sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
+	k\sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
 \end{equation}
 where $k$ is the side length of the $n$-gon.
 
@@ -282,15 +279,15 @@ We still have the range $0 \leq \theta \leq \frac{\ang{180}}{n}$.
 We can then try to find $\angle V_{m+1}OB$. To do this, we can once again find the slice of the polygon which contains segment $OB$. We can find the number of triangles that has to be passed through to form $\angle V_{1}OB$. Let this value be $x$. This gives the expression:
 
 \begin{align*}
-	 x = \frac{\theta + \ang{90}}{\frac{\ang{360}}{n}}
+	x = \frac{\theta + \ang{90}}{\frac{\ang{360}}{n}}
 \end{align*}
 
 Simplifying it,
 
 \begin{align*}
-	 x & = \frac{\theta + \ang{90}}{\frac{\ang{360}}{n}}   \\
-	 & = \frac{\theta n + \ang{90} n}{\ang{360}} \\
-	 & = \frac{\theta n}{\ang{360}} + \frac{n}{4}
+	x & = \frac{\theta + \ang{90}}{\frac{\ang{360}}{n}} \\
+	  & = \frac{\theta n + \ang{90} n}{\ang{360}}       \\
+	  & = \frac{\theta n}{\ang{360}} + \frac{n}{4}
 \end{align*}
 
 Plugging in the range for $\theta$,
@@ -299,7 +296,7 @@ Plugging in the range for $\theta$,
 	\frac{n}{4} \leq \frac{\theta n}{\ang{360}} + \frac{n}{4} \leq \frac{n}{4} + \frac{1}{2}
 \end{align*}
 
-Substituting $n$ for $4m + 2$, 
+Substituting $n$ for $4m + 2$,
 
 \begin{align*}
 	m + \frac{1}{2} \leq x \leq m + 1
@@ -311,9 +308,9 @@ To do so, the equality $\angle V_{m+2}OB = \angle V_{1}OA$ must be true.
 
 \begin{align*}
 	\angle V_{m+2}OB & = \left(m+1\right)\left(\frac{\ang{360}}{n}\right) - \ang{90} - \theta \\
-	2\theta & = \frac{\ang{360}\left(m+1\right)}{4m+2} - \ang{90}   \\
-	2\theta & = \frac{\ang{180}}{4m+2}    \\
-	\theta & = \frac{\ang{90}}{n}
+	2\theta          & = \frac{\ang{360}\left(m+1\right)}{4m+2} - \ang{90}                    \\
+	2\theta          & = \frac{\ang{180}}{4m+2}                                               \\
+	\theta           & = \frac{\ang{90}}{n}
 \end{align*}
 
 Hence, a square can be inscribed when $\theta = \frac{\ang{90}}{n}$.
@@ -321,19 +318,19 @@ Hence, a square can be inscribed when $\theta = \frac{\ang{90}}{n}$.
 To find the side length of the square, we can use the Law of Sines, similar to Case 1. We have:
 
 \begin{align*}
-	OA & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \frac{\ang{90}}{n}\right)}  \\
-	& = \frac{r \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}  \\
-	2r^2 \left(1 - \cos \frac{\ang{360}}{n}\right) & = k^2  \\
-	r & = k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}}  \\
-	s & = OA\sqrt{2} \\
-	& = \frac{r \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}  \\
-	& =\frac{k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}} \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}  \\
-	& = \frac{k \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}\sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
+	OA                                             & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left(\frac{\ang{180}}{n} - \frac{\ang{90}}{n}\right)}                   \\
+	                                               & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}                                                      \\
+	2r^2 \left(1 - \cos \frac{\ang{360}}{n}\right) & = k^2                                                                                                             \\
+	r                                              & = k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}}                                                                  \\
+	s                                              & = OA\sqrt{2}                                                                                                      \\
+	                                               & = \frac{r \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}                                             \\
+	                                               & =\frac{k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}} \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}} \\
+	                                               & = \frac{k \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}\sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
 \end{align*}
 
 Hence, the expression for the side length of the largest square in such a polygon would be
 \begin{equation}
-\frac{k \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}\sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
+	\frac{k \cos \frac{\ang{180}}{n}}{\cos \frac{\ang{90}}{n}}\sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
 \end{equation}
 where $k$ is the side length of the $n$-gon.
 
@@ -346,8 +343,8 @@ Currently, we have no way to assume that the square's vertices lie on the perime
 This case is still largely a work in progress, and the results obtained so far are inaccurate. However, we have obtained some insights which could aid us in solving this problem.
 
 \begin{itemize}
-\item The center of the square cannot coincide with the center of the $n$-gon.
-\item One side of the square must be parallel to one side of the $n$-gon.
+	\item The center of the square cannot coincide with the center of the $n$-gon.
+	\item One side of the square must be parallel to one side of the $n$-gon.
 \end{itemize}
 
 The first of these insights has a simple proof: there are no two parallel lines of symmetry for such a regular polygon, hence if the center of the square were to coincide with the center of the polygon, at least two vertices of the square would not lie on the perimeter of the polygon.
@@ -362,21 +359,21 @@ The second of these insights will be explained in further detail in RQ3, below. 
 \end{figure}
 
 \begin{align*}
-  \theta & = \min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{\ang{45}}{\frac{\ang{360}}{n}} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{\ang{45}}{\frac{\ang{360}}{n}} \right\rfloor\right)\right]     \\
-  & = \min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8}\right\rfloor\right)\right]     \\
+	\theta & = \min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{\ang{45}}{\frac{\ang{360}}{n}} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{\ang{45}}{\frac{\ang{360}}{n}} \right\rfloor\right)\right] \\
+	       & = \min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8}\right\rfloor\right)\right]                                                    \\
 \end{align*}
 
 \begin{align*}
-	OA & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left(\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8}\right \rfloor\right)\right]\right)\right\rangle}  \\
-	k^2 & = 2r^2 \left(1 - \cos \frac{\ang{360}}{n}\right)  \\
-	r & = k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}}  \\
+	OA  & = \frac{r \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left(\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8}\right \rfloor\right)\right]\right)\right\rangle} \\
+	k^2 & = 2r^2 \left(1 - \cos \frac{\ang{360}}{n}\right)                                                                                                                                                                                                                                                     \\
+	r   & = k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}}                                                                                                                                                                                                                                                     \\
 \end{align*}
 
 \begin{align*}
-	s & = OA\sqrt{2} \\
-	& = \frac{r \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left(\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8}\right\rfloor\right)\right]\right)\right\rangle}  \\
-	& = \frac{k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}} \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left(\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor\right)\right]\right)\right\rangle}  \\
-	& = \frac{k \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left(\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor\right)\right]\right)\right\rangle} \sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
+	s & = OA\sqrt{2}                                                                                                                                                                                                                                                                                                                                               \\
+	  & = \frac{r \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left(\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8}\right\rfloor\right)\right]\right)\right\rangle}                                               \\
+	  & = \frac{k\sqrt{\frac{1}{2 - 2\cos\frac{\ang{360}}{n}}} \sqrt{2} \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left(\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor\right)\right]\right)\right\rangle} \\
+	  & = \frac{k \cos \frac{\ang{180}}{n}}{\cos \left\langle\frac{\ang{180}}{n} - \left(\min\left[\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor, \frac{\ang{360}}{n} - \left(\ang{45} - \frac{\ang{360}}{n}\left\lfloor \frac{n}{8} \right\rfloor\right)\right]\right)\right\rangle} \sqrt{\frac{1}{1 - \cos\frac{\ang{360}}{n}}}
 \end{align*}
 
 \section{Research Question 3}
@@ -388,7 +385,7 @@ We were unable to find this due to the vagueness of the question. However, we ar
 \subsection{Proof that a square can always be inscribed}
 We have proved that a square can always be inscribed in a convex polygon.
 
-We first construct an arbitary line $A_{1}A_{2}$. 
+We first construct an arbitary line $A_{1}A_{2}$.
 
 \begin{figure}[htpb]
 	\centering
@@ -413,7 +410,7 @@ We shall call the line segments that connect the midpoints together the \textbf{
 
 \pagebreak
 
-Now, we draw a line perpendicular to $A_{1}A_{2}$ at every vertex, get the midpoint of the newly formed line segments, and connect them together. 
+Now, we draw a line perpendicular to $A_{1}A_{2}$ at every vertex, get the midpoint of the newly formed line segments, and connect them together.
 
 \begin{figure}[htpb]
 	\centering
@@ -427,7 +424,7 @@ We shall call the line segments that connect the midpoints together the \textbf{
 \pagebreak
 
 Notice how the two groups intersect at one point. Let this point be $O$. We draw a line parallel to $A_{1}A_{2}$ at point $O$.
-We then draw another line perpendicular to $A_{1}A_{2}$ at $O$. 
+We then draw another line perpendicular to $A_{1}A_{2}$ at $O$.
 
 \begin{figure}[htpb]
 	\centering
@@ -448,7 +445,12 @@ We know that a construction where one side of the square is parallel to one side
 Hence, the only occurrence where the rhombus is a square and all four angles of the rhombus are equal is when $A_{1}A_{2}$ is $\ang{45}$ away from the base of the polygon.
 
 \section{Conclusion and Further Work}
-All in all, we were able to solve most of our research questions. However, as RQ3 was very vague, it was more difficult than the others, leading to us being unable to complete it. One potential continuation of the project is that, besides completing RQ3, we can also address concave polygons, or even curves. Such a continuation would be able to address things such as the inscribed square problem. Other possible extension methods would be to extend this problem to 3D space, for example, by fitting cubes into prisms with different $n$-gons as bases.   
+All in all, we were able to solve most of our research questions.
+However, as RQ3 was very vague, it was more difficult than the others, leading to us being unable to complete it.
+One potential continuation of the project is that, besides completing RQ3, we can also address concave polygons,
+or even curves. Such a continuation would be able to address things such as the inscribed square problem.
+Other possible extension methods would be to extend this problem to 3-dimensional space, for example, by
+fitting cubes into prisms with different $n$-gons as bases.
 
 \printbibliography
 \end{document}
